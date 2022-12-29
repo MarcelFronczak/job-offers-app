@@ -1,7 +1,7 @@
 {
   "name": "job-offers-app",
   "version": "0.1.0",
-  "homepage": "https://MarcelFronczak.github.io/job-offers-app/",
+  "homepage": "https://MarcelFronczak.github.io/job-offers-app",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
