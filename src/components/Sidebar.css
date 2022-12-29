@@ -1,0 +1,25 @@
+sidebar {
+    position: fixed;
+    top: 60;
+    right: 0;
+    height: calc(100% - 60px);
+    padding: 2rem;
+    background-color: var(--color-primary-light);
+    box-shadow: -2px 0px 25px rgba(0, 0, 0, 0.15);
+}
+
+.searchbar {
+    background: #F7F9F4;
+    box-shadow: 2px 2px 25px 1px rgba(0, 0, 0, 0.12);
+    border-radius: 25px;
+    padding: 8px 18px;
+    outline: none;
+    border: none;
+    color: var(--color-primary-dark);
+    font-size: 12px;
+}
+
+.searchbar::placeholder {
+    color: var(--color-primary-dark);
+    font-size: 12px;
+}

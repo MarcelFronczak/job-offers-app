@@ -1,0 +1,58 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--color-gradient-dark);
+    padding: 14px 56px;
+}
+
+.navbar-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    color: var(--color-accent-red);
+    height: 32px;
+    width: 32px;
+    margin-right: 6px;
+}
+
+.logo-text {
+    color: var(--color-primary-light);
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.logo-span {
+    color: var(--color-accent-beige);
+}
+
+.cta {
+    width: 84px;
+    height: 32px;
+    border: none;
+    color: var(--color-primary-dark);
+    cursor: pointer;
+}
+
+.cta:hover {
+    opacity: 0.95;
+}
+
+.btn-sign-up {
+    background: var(--color-accent-beige);
+    border-radius: 25px 0 0 25px;
+}
+
+.btn-sign-in {
+    background: var(--color-accent-red);
+    border-radius: 0 25px 25px 0;
+}
