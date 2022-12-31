@@ -1,6 +1,6 @@
-sidebar {
+aside {
     position: fixed;
-    top: 60;
+    top: 250;
     right: 0;
     height: calc(100% - 60px);
     padding: 2rem;

@@ -10,7 +10,7 @@ function Sidebar() {
     }
 
   return (
-    <sidebar>
+    <aside>
       <div className='filters-div'>
             <input
                 value={search}
@@ -21,7 +21,7 @@ function Sidebar() {
             </input>
         <div className='filters'></div>
       </div>
-    </sidebar>
+    </aside>
   )
 }
 

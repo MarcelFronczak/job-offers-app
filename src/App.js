@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import Navbar from "./components/Navbar";
+import OffersList from './components/OffersList';
 import Sidebar from './components/Sidebar';
 
 
@@ -10,6 +11,7 @@ const App = () => {
       <Navbar />
       <main>
         <Sidebar />
+        <OffersList />
       </main>
     </div>
   )
