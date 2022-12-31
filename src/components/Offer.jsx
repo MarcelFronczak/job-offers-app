@@ -16,3 +16,12 @@ function Offer({ offer }) {
 }
 
 export default Offer
+
+// setting HTML from json
+// function createMarkup() {
+//     return {__html: 'First &middot; Second'};
+//   }
+  
+//   function MyComponent() {
+//     return <div dangerouslySetInnerHTML={createMarkup()} />;
+//   }
