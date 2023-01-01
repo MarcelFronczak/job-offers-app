@@ -5,6 +5,7 @@
     width: 100%;
     background: var(--color-gradient-dark);
     padding: 14px 56px;
+    z-index: 1;
 }
 
 .navbar-items {

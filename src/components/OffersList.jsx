@@ -20,6 +20,7 @@ function OffersList() {
 
   return (
     <div className='offers-container'>
+      <h1 className='offers-heading'>Find the best position for <span className='red'>You</span></h1>
       {
         offers?.length > 0 ? (
           <div>

@@ -34,3 +34,7 @@ main {
     height: auto;
 }
 
+.red {
+    color: var(--color-accent-red);
+}
+

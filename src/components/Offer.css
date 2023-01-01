@@ -1,3 +1,35 @@
+.offer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px;
+    border-left: 1px solid #F56457;
+    box-shadow: 2px 2px 25px 1px rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+    margin-bottom: 1.5rem;
+}
+
+.col-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+
 .offer-heading {
     font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.company-name {
+    color: #727584;
+}
+
+.level {
+    color: #F56457;
+}
+
+.save-btn {
+    cursor: pointer;
+    font-size: 22px;
 }
