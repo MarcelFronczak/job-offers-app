@@ -5,8 +5,15 @@
     padding: 14px;
     border-left: 1px solid #F56457;
     box-shadow: 2px 2px 25px 1px rgba(0, 0, 0, 0.15);
-    border-radius: 2px;
+    border-radius: 0 2px 2px 0;
     margin-bottom: 1.5rem;
+    transition: all 0.19s ease;
+    cursor: pointer;
+}
+
+.offer-container:hover {
+    transform: translateX(6px);
+    border-color: #fa5d4f;
 }
 
 .col-right {
@@ -14,6 +21,7 @@
     flex-direction: row;
     align-items: center;
     gap: 16px;
+    margin-left: 6px;
 }
 
 .offer-heading {
@@ -21,7 +29,7 @@
     margin-bottom: 12px;
 }
 
-.company-name {
+.company-name, .salary {
     color: #727584;
 }
 

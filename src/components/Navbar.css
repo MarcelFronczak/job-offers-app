@@ -57,3 +57,25 @@
     background: var(--color-accent-red);
     border-radius: 0 25px 25px 0;
 }
+
+.bars {
+    color: #EDE5D8;
+    cursor: pointer;
+    font-size: 28px;
+    display: none;
+}
+
+@media screen and (max-width: 820px) {
+    .navbar {
+        padding: 14px 42px;
+    }
+    .nav-btns {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .bars {
+        display: block;
+    }
+}
