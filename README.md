@@ -1,4 +1,4 @@
-JobFinder Ract App using API
+JobFinder React App using API
 
 Functions: 
 - Displaying fetched job offers 
