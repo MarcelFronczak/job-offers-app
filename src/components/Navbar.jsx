@@ -3,13 +3,18 @@ import './Navbar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
-import Sidebar from './Sidebar';
 
 function Navbar() {
   const [barsClicked, setBarsClicked] = useState(false);
+  const [search, setSearch] = useState('');
 
   const handleClick = () => {
     setBarsClicked(!barsClicked);
+  }
+
+  function handleChange(e) {
+      setSearch(e.target.value);
+      console.log(search);
   }
 
   return (
@@ -29,7 +34,18 @@ function Navbar() {
               </div>
           </div>
       </nav>
-      <Sidebar />
+      <aside>
+        <div className='filters-div'>
+              <input
+                  value={search}
+                  onChange={handleChange}
+                  type='text'
+                  className='searchbar'
+                  placeholder='Search for jobs...'>
+              </input>
+          <div className='filters'></div>
+        </div>
+    </aside>
     </>
   )
 }
