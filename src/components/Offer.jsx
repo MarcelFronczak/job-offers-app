@@ -6,6 +6,7 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons'
 function Offer({ offer, filter }) {
   const [clicked, setClicked] = useState(false);
   const [hover, setHover] = useState(false);
+  const [details, setDetails] = useState(false);
 
   const toggle = () => {
     setClicked(!clicked);
@@ -17,6 +18,14 @@ function Offer({ offer, filter }) {
 
   const mouseLeave = () => {
     setHover(false);
+  }
+
+  const handleClick = () => {
+    setDetails(!details);
+  }
+
+  function createMarkup() {
+    return {__html: offer.contents};
   }
 
   const level = offer.levels[0].short_name;
@@ -59,18 +68,21 @@ function Offer({ offer, filter }) {
     cursor: 'pointer',
     fontSize: '22px'
   }
-
+  
   return (
-      <div className='offer-container'>
-        <div>
-          <h1 className='offer-heading'>{offer.name}</h1>
-          <p className='company-name'>{offer.company.name}</p>
+      <div className='offer-container' onClick={handleClick}>
+        <div className="columns">
+          <div className='left-col'>
+            <h1 className='offer-heading'>{offer.name}</h1>
+            <p className='company-name'>{offer.company.name}</p>
+          </div>
+          <div className='col-right'>
+            <p className='salary'>{salary}</p>
+            <p className='level'>{levelUpper}</p>
+            <FontAwesomeIcon icon={faHeart} className='save-btn' onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} onClick={toggle} style={saveBtnStyle}/>
+          </div>
         </div>
-        <div className='col-right'>
-          <p className='salary'>{salary}</p>
-          <p className='level'>{levelUpper}</p>
-          <FontAwesomeIcon icon={faHeart} className='save-btn' onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} onClick={toggle} style={saveBtnStyle}/>
-        </div>
+        {details && <div className='description' dangerouslySetInnerHTML={createMarkup()}></div>}
       </div>
       ) 
 }

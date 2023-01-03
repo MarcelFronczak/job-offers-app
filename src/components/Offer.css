@@ -1,7 +1,8 @@
 .offer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 100%;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
     padding: 14px;
     border-left: 1px solid #F56457;
     box-shadow: 2px 2px 25px 1px rgba(0, 0, 0, 0.15);
@@ -9,6 +10,7 @@
     margin-bottom: 1.5rem;
     transition: all 0.19s ease;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .offer-container:hover {
@@ -16,11 +18,17 @@
     border-color: #fa5d4f;
 }
 
+.columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .col-right {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
     margin-left: 6px;
 }
 
@@ -40,4 +48,33 @@
 .save-btn {
     cursor: pointer;
     font-size: 22px;
+}
+
+.description {
+    margin-top: 1.5rem;
+    color: #393D50;
+}
+
+.description > * {
+    list-style: none;
+}
+
+.description > p > strong, .description > strong, .description > b {
+    font-weight: 500;
+}
+
+.description li {
+    margin-bottom: 6px;
+}
+
+@media screen and (max-width: 820px) {
+    .col-right {
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        gap: 12px;
+    }
+    .description p {
+        font-size: 14px;
+    }
+
 }
