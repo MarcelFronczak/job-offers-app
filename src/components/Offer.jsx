@@ -24,6 +24,7 @@ function Offer({ offer, filter }) {
     setDetails(!details);
   }
 
+  // setting HTML from json
   function createMarkup() {
     return {__html: offer.contents};
   }
@@ -89,11 +90,3 @@ function Offer({ offer, filter }) {
 
 export default Offer
 
-// setting HTML from json
-// function createMarkup() {
-//     return {__html: 'First &middot; Second'};
-//   }
-  
-//   function MyComponent() {
-//     return <div dangerouslySetInnerHTML={createMarkup()} />;
-//   }

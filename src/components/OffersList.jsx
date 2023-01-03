@@ -33,8 +33,8 @@ function OffersList({ filter }) {
             ))}
           </div>
         ) : (
-          <div>
-              <h2>No jobs found</h2>
+          <div style={{textAlign: 'center', marginTop: '8rem'}}>
+              <h2>Loading...</h2>
           </div>
         )
       }
