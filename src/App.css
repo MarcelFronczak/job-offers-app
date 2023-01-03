@@ -38,3 +38,39 @@ main {
     color: var(--color-accent-red);
 }
 
+@media screen and (max-width: 580px) {
+    .navbar {
+        padding: 12px 36px !important;
+    }
+    .logo-icon {
+        height: 28px !important;
+        width: 28px !important;
+        margin-right: 5px !important;
+    }
+    .logo-text {
+        font-size: 16px !important;
+    }
+    .nav-btns {
+        gap: 12px !important;
+    }
+    .cta {
+        height: 28px !important;
+        width: 70px !important;
+        font-size: 12px !important;
+    }
+    .offers-heading {
+        font-size: 32px !important;
+    }
+    .offer-heading {
+        font-size: 14px !important;
+    }
+    .company-name, .salary, .level {
+        font-size: 12px !important;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .navbar {
+        padding: 12px 28px !important;
+    } 
+}

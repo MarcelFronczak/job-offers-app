@@ -4,16 +4,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 
-function Navbar() {
-  const [barsClicked, setBarsClicked] = useState(false);
+function Navbar({ setFilter }) {
+  const [open, setOpen] = useState(false);
   const [search, setSearch] = useState('');
 
   const handleClick = () => {
-    setBarsClicked(!barsClicked);
+    setOpen(!open);
+    console.log({open})
   }
 
   function handleChange(e) {
       setSearch(e.target.value);
+      setFilter(e.target.value);
       console.log(search);
   }
 
@@ -34,7 +36,7 @@ function Navbar() {
               </div>
           </div>
       </nav>
-      <aside>
+      <aside className='sidebar'>
         <div className='filters-div'>
               <input
                   value={search}
@@ -46,6 +48,21 @@ function Navbar() {
           <div className='filters'></div>
         </div>
     </aside>
+    {open && (
+      <aside className='sidebar-mobile'>
+          <div className='filters-div'>
+                <input
+                    value={search}
+                    onChange={handleChange}
+                    type='text'
+                    className='searchbar'
+                    placeholder='Search for jobs...'>
+                </input>
+            <div className='filters'></div>
+          </div>
+      </aside>
+      )
+    }
     </>
   )
 }

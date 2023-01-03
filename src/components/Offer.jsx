@@ -3,7 +3,7 @@ import './Offer.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
 
-function Offer({ offer }) {
+function Offer({ offer, filter }) {
   const [clicked, setClicked] = useState(false);
   const [hover, setHover] = useState(false);
 
@@ -61,18 +61,18 @@ function Offer({ offer }) {
   }
 
   return (
-    <div className='offer-container'>
-      <div>
-        <h1 className='offer-heading'>{offer.name}</h1>
-        <p className='company-name'>{offer.company.name}</p>
+      <div className='offer-container'>
+        <div>
+          <h1 className='offer-heading'>{offer.name}</h1>
+          <p className='company-name'>{offer.company.name}</p>
+        </div>
+        <div className='col-right'>
+          <p className='salary'>{salary}</p>
+          <p className='level'>{levelUpper}</p>
+          <FontAwesomeIcon icon={faHeart} className='save-btn' onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} onClick={toggle} style={saveBtnStyle}/>
+        </div>
       </div>
-      <div className='col-right'>
-        <p className='salary'>{salary}</p>
-        <p className='level'>{levelUpper}</p>
-        <FontAwesomeIcon icon={faHeart} className='save-btn' onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} onClick={toggle} style={saveBtnStyle}/>
-      </div>
-    </div>
-  )
+      ) 
 }
 
 export default Offer

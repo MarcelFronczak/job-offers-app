@@ -9,3 +9,9 @@
     font-size: 36px;
     text-align: center;
 }
+
+@media screen and (max-width: 820px) {
+    .offers-container {
+        width: 100%;
+    }
+}

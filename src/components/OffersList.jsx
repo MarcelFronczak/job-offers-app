@@ -3,12 +3,12 @@ import axios from 'axios'
 import Offer from './Offer';
 import './OffersList.css'
 
-function OffersList() {
+function OffersList({ filter }) {
     const [offers, setOffers] = useState([]);
-    const API_URL = "https://www.themuse.com/api/public/jobs?page=1";
+    // const API_URL = "https://www.themuse.com/api/public/jobs?page=1";
 
     useEffect(() => {
-        axios.get(API_URL)
+        axios.get(`https://www.themuse.com/api/public/jobs?page=1`)
             .then(res => {
                 setOffers(res.data.results);
                 console.log(res.data.results)
@@ -22,10 +22,14 @@ function OffersList() {
     <div className='offers-container'>
       <h1 className='offers-heading'>Find the best position for <span className='red'>You</span></h1>
       {
-        offers?.length > 0 ? (
+        offers?.length > 0 ? 
+        (
           <div>
-            {offers.map((offer) => (
-              <Offer key={offer.id} offer={offer} />
+            {offers.filter((offer) => {
+              return filter.toLowerCase() === '' ? offer : offer.name.toLowerCase().includes(filter)
+            })
+            .map((offer) => (
+              <Offer key={offer.id} offer={offer} filter={filter} />
             ))}
           </div>
         ) : (

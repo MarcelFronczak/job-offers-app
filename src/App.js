@@ -4,11 +4,12 @@ import Navbar from "./components/Navbar";
 import OffersList from './components/OffersList';
 
 const App = () => {
+  const [filter, setFilter] = useState('');
   return (
     <div>
-      <Navbar />
+      <Navbar setFilter={setFilter} />
       <main>
-        <OffersList />
+        <OffersList filter={ filter }/>
       </main>
     </div>
   )
