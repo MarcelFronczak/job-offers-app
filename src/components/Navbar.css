@@ -5,7 +5,7 @@
     width: 100%;
     background: var(--color-gradient-dark);
     padding: 14px 56px;
-    z-index: 1;
+    z-index: 3;
 }
 
 .navbar-items {
@@ -17,6 +17,7 @@
 .logo {
     display: flex;
     align-items: center;
+    text-decoration: none;
 }
 
 .logo-icon {
@@ -30,6 +31,7 @@
     color: var(--color-primary-light);
     font-weight: 500;
     font-size: 18px;
+    text-decoration: none;
 }
 
 .logo-span {
@@ -67,7 +69,6 @@
 
 .sidebar {
     position: fixed;
-    top: 250;
     right: 0;
     height: calc(100% - 60px);
     padding: 2rem;
@@ -113,11 +114,10 @@
     }
 
     .sidebar-mobile {
-        display: block;
         position: fixed;
-        top: 250;
+        top: 52px;
         right: 0;
-        height: calc(100% - 60px);
+        height: 100%;
         padding: 2rem;
         background-color: var(--color-primary-light);
         box-shadow: -2px 0px 25px rgba(0, 0, 0, 0.15);

@@ -77,11 +77,11 @@ function Offer({ offer, filter }) {
             <h1 className='offer-heading'>{offer.name}</h1>
             <p className='company-name'>{offer.company.name}</p>
           </div>
-          <div className='col-right'>
+          <div className='right-col'>
             <p className='salary'>{salary}</p>
             <p className='level'>{levelUpper}</p>
-            <FontAwesomeIcon icon={faHeart} className='save-btn' onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} onClick={toggle} style={saveBtnStyle}/>
-          </div>
+            </div>
+          <FontAwesomeIcon icon={faHeart} className='save-btn' onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} onClick={toggle} style={saveBtnStyle}/>
         </div>
         {details && <div className='description' dangerouslySetInnerHTML={createMarkup()}></div>}
       </div>

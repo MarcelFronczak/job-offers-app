@@ -22,14 +22,16 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
-.col-right {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 12px;
-    margin-left: 6px;
+.left-col {
+    width: 75%;
+}
+
+.right-col {
+    text-align: center;
+    margin-left: 8px;
 }
 
 .offer-heading {
@@ -42,6 +44,7 @@
 }
 
 .level {
+    margin-top: 8px;
     color: #F56457;
 }
 
@@ -68,6 +71,9 @@
 }
 
 @media screen and (max-width: 820px) {
+    .offer-heading {
+        margin-bottom: 8px;
+    }
     .col-right {
         flex-direction: column-reverse;
         align-items: flex-end;

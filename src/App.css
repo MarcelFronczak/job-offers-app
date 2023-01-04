@@ -59,7 +59,7 @@ main {
         font-size: 12px !important;
     }
     .left-col {
-        max-width: 280px !important;
+        width: 65% !important;
     }
     .offers-heading {
         font-size: 32px !important;
