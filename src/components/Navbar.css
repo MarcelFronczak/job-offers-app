@@ -20,6 +20,10 @@
     text-decoration: none;
 }
 
+.logo:hover, .logo:focus, .logo:visited, .logo:link, .logo:active  {
+    text-decoration: none;
+}
+
 .logo-icon {
     color: var(--color-accent-red);
     height: 32px;
