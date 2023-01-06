@@ -75,10 +75,17 @@
     position: fixed;
     right: 0;
     height: calc(100% - 60px);
-    padding: 2rem;
+    padding: 2.5rem 2rem 2rem;
     background-color: var(--color-primary-light);
     box-shadow: -2px 0px 25px rgba(0, 0, 0, 0.15);
     z-index: 1;
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .searchbar {
@@ -96,6 +103,28 @@
 .searchbar::placeholder {
     color: var(--color-primary-dark);
     font-size: 12px;
+}
+
+.icons-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.social-icon {
+    color: var(--color-primary-dark);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.social-icon:hover {
+    /* background-color: var(--color-accent-beige); */
+    color: var(--color-accent-red);
+    -webkit-box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.12);
 }
 
 .sidebar-mobile {
@@ -121,8 +150,8 @@
         position: fixed;
         top: 52px;
         right: 0;
-        height: 100%;
-        padding: 2rem;
+        height: calc(100% - 52px);
+        padding: 2.5rem 2rem 2rem;
         background-color: var(--color-primary-light);
         box-shadow: -2px 0px 25px rgba(0, 0, 0, 0.15);
         z-index: 1;

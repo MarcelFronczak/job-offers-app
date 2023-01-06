@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import './Navbar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser } from '@fortawesome/free-solid-svg-icons'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faBars } from '@fortawesome/free-solid-svg-icons'
+import { faFacebookF, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 
 function Navbar({ setFilter }) {
   const [open, setOpen] = useState(false);
@@ -37,20 +37,7 @@ function Navbar({ setFilter }) {
           </div>
       </nav>
       <aside className='sidebar'>
-        <div className='filters-div'>
-              <input
-                  value={search}
-                  onChange={handleChange}
-                  type='text'
-                  className='searchbar'
-                  placeholder='Search for jobs...'
-                  spellCheck='false'>
-              </input>
-          <div className='filters'></div>
-        </div>
-    </aside>
-    {open && (
-      <aside className='sidebar-mobile'>
+        <div className="sidebar-content">
           <div className='filters-div'>
                 <input
                     value={search}
@@ -62,6 +49,33 @@ function Navbar({ setFilter }) {
                 </input>
             <div className='filters'></div>
           </div>
+          <div className="icons-container">
+            <a target='_blank' href="https://www.facebook.com/" className='social-icon'><FontAwesomeIcon icon={faFacebookF} /></a>
+            <a target='_blank' href="https://twitter.com/" className='social-icon'><FontAwesomeIcon icon={faTwitter} /></a>
+            <a target='_blank' href="https://www.linkedin.com/" className='social-icon'><FontAwesomeIcon icon={faLinkedinIn} /></a>
+          </div>
+        </div>
+    </aside>
+    {open && (
+      <aside className='sidebar-mobile'>
+        <div className="sidebar-content">
+          <div className='filters-div'>
+                <input
+                    value={search}
+                    onChange={handleChange}
+                    type='text'
+                    className='searchbar'
+                    placeholder='Search for jobs...'
+                    spellCheck='false'>
+                </input>
+            <div className='filters'></div>
+          </div>
+          <div className="icons-container">
+            <a target='_blank' href="https://www.facebook.com/" className='social-icon'><FontAwesomeIcon icon={faFacebookF} /></a>
+            <a target='_blank' href="https://twitter.com/" className='social-icon'><FontAwesomeIcon icon={faTwitter} /></a>
+            <a target='_blank' href="https://www.linkedin.com/" className='social-icon'><FontAwesomeIcon icon={faLinkedinIn} /></a>
+          </div>
+        </div>
       </aside>
       )
     }
