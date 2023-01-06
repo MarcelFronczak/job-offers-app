@@ -14,7 +14,7 @@
    --color-accent-red: #F56457; 
    --color-details-gray: #727584;
    --color-details-blue: #556198;
-   --color-gradient-dark: linear-gradient(90.15deg, #393D50 13.49%, #2E334B 81.89%);
+   --color-gradient-dark: linear-gradient(90deg, rgba(38,45,82,1) 20%, rgba(31,38,74,1) 80%);
 }
 
 h1, h2, h3 {
@@ -74,6 +74,11 @@ main {
 
 @media screen and (max-width: 370px) {
     .navbar {
-        padding: 12px 28px !important;
+        padding: 12px 22px !important;
     } 
+    .cta {
+        height: 26px !important;
+        width: 68px !important;
+        font-size: 11px !important;
+    }
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './Navbar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser, faBars } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 
 function Navbar({ setFilter }) {
@@ -32,7 +32,11 @@ function Navbar({ setFilter }) {
                     <button className='cta btn-sign-up'>Sign Up</button>
                     <button className='cta btn-sign-in'>Sign In</button>
                 </div>
-                <FontAwesomeIcon icon={faBars} className='bars' onClick={handleClick} />
+                {
+                  open ? 
+                    <FontAwesomeIcon icon={faXmark} className='xmark' onClick={handleClick} />
+                    : <FontAwesomeIcon icon={faBars} className='bars' onClick={handleClick} />
+                }
               </div>
           </div>
       </nav>

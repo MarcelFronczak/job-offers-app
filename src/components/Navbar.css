@@ -64,11 +64,17 @@
     border-radius: 0 25px 25px 0;
 }
 
-.bars {
+.bars, .xmark {
     color: #EDE5D8;
     cursor: pointer;
+    height: 28px;
+    width: 26px;
     font-size: 28px;
     display: none;
+}
+
+.xmark {
+    font-size: 32px;
 }
 
 .sidebar {
@@ -157,7 +163,7 @@
         z-index: 1;
     }
 
-    .bars {
+    .bars, .xmark {
         display: block;
     }
 }
