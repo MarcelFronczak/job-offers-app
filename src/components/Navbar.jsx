@@ -43,7 +43,8 @@ function Navbar({ setFilter }) {
                   onChange={handleChange}
                   type='text'
                   className='searchbar'
-                  placeholder='Search for jobs...'>
+                  placeholder='Search for jobs...'
+                  spellCheck='false'>
               </input>
           <div className='filters'></div>
         </div>
@@ -56,7 +57,8 @@ function Navbar({ setFilter }) {
                     onChange={handleChange}
                     type='text'
                     className='searchbar'
-                    placeholder='Search for jobs...'>
+                    placeholder='Search for jobs...'
+                    spellCheck='false'>
                 </input>
             <div className='filters'></div>
           </div>
