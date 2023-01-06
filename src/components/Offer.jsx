@@ -8,7 +8,8 @@ function Offer({ offer, filter }) {
   const [hover, setHover] = useState(false);
   const [details, setDetails] = useState(false);
 
-  const toggle = () => {
+  const toggle = (e) => {
+    e.stopPropagation()
     setClicked(!clicked);
   }
 

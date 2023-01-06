@@ -5,7 +5,7 @@ import OffersList from './components/OffersList';
 
 const App = () => {
   const [filter, setFilter] = useState('');
-  
+   
   return (
     <div>
       <Navbar setFilter={setFilter} />
