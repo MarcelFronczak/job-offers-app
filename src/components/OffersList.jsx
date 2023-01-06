@@ -30,7 +30,7 @@ function OffersList({ filter }) {
               return filter.toLowerCase() === '' ? offer : offer.name.toLowerCase().includes(filter)
             })
             .map((offer) => (
-              <Offer key={offer.id} offer={offer} filter={filter} />
+              <Offer key={offer.id} offer={offer} />
             ))}
           </div>
         ) : (

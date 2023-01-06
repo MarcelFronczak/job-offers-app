@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Navbar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
-import { faFacebookF, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import { faFacebookF, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 function Navbar({ setFilter }) {
   const [open, setOpen] = useState(false);
@@ -54,9 +54,9 @@ function Navbar({ setFilter }) {
             <div className='filters'></div>
           </div>
           <div className="icons-container">
-            <a target='_blank' href="https://www.facebook.com/" className='social-icon'><FontAwesomeIcon icon={faFacebookF} /></a>
-            <a target='_blank' href="https://twitter.com/" className='social-icon'><FontAwesomeIcon icon={faTwitter} /></a>
-            <a target='_blank' href="https://www.linkedin.com/" className='social-icon'><FontAwesomeIcon icon={faLinkedinIn} /></a>
+            <a href="#" className='social-icon'><FontAwesomeIcon icon={faFacebookF} /></a>
+            <a target='_blank' href="https://github.com/MarcelFronczak?tab=repositories" className='social-icon'><FontAwesomeIcon icon={faGithub} /></a>
+            <a target='_blank' href="https://www.linkedin.com/in/marcel-fronczak-88523022b/" className='social-icon'><FontAwesomeIcon icon={faLinkedinIn} /></a>
           </div>
         </div>
     </aside>
@@ -75,9 +75,9 @@ function Navbar({ setFilter }) {
             <div className='filters'></div>
           </div>
           <div className="icons-container">
-            <a target='_blank' href="https://www.facebook.com/" className='social-icon'><FontAwesomeIcon icon={faFacebookF} /></a>
-            <a target='_blank' href="https://twitter.com/" className='social-icon'><FontAwesomeIcon icon={faTwitter} /></a>
-            <a target='_blank' href="https://www.linkedin.com/" className='social-icon'><FontAwesomeIcon icon={faLinkedinIn} /></a>
+            <a href="#" className='social-icon'><FontAwesomeIcon icon={faFacebookF} /></a>
+            <a target='_blank' href="https://github.com/MarcelFronczak?tab=repositories" className='social-icon'><FontAwesomeIcon icon={faGithub} /></a>
+            <a target='_blank' href="https://www.linkedin.com/in/marcel-fronczak-88523022b/" className='social-icon'><FontAwesomeIcon icon={faLinkedinIn} /></a>
           </div>
         </div>
       </aside>
