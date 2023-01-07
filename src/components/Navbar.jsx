@@ -58,6 +58,7 @@ function Navbar({ setFilter }) {
                 </input>
 
             <form className='filters-form'>
+              
               <fieldset className='level-container'>
                 <div className='level-toggle-div' onClick={handleLevelDivClick}>
                   <p>Experience level</p>
