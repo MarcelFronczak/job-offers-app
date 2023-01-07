@@ -40,7 +40,7 @@ main {
 
 @media screen and (max-width: 580px) {
     .navbar {
-        padding: 12px 36px !important;
+        padding: 12px 26px !important;
     }
     .logo-icon {
         height: 28px !important;
@@ -61,6 +61,9 @@ main {
     .left-col {
         width: 65% !important;
     }
+    .offers-container {
+        padding-top: 3rem !important;
+    }
     .offers-heading {
         font-size: 32px !important;
     }
@@ -74,7 +77,7 @@ main {
 
 @media screen and (max-width: 370px) {
     .navbar {
-        padding: 12px 22px !important;
+        padding: 11px 20px !important;
     } 
     .cta {
         height: 26px !important;

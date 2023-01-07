@@ -166,6 +166,10 @@
     cursor: pointer;
 }
 
+.levels-list label:hover {
+    background-color: #eff1eb;
+}
+
 .icons-container {
     display: flex;
     justify-content: space-evenly;

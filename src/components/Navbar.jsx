@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './Navbar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser, faBars, faXmark, faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faBars, faXmark, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 function Navbar({ setFilter }) {
@@ -61,7 +61,7 @@ function Navbar({ setFilter }) {
               <fieldset className='level-container'>
                 <div className='level-toggle-div' onClick={handleLevelDivClick}>
                   <p>Experience level</p>
-                  <FontAwesomeIcon icon={faChevronDown} />
+                  {levelDivOpen ? <FontAwesomeIcon icon={faChevronUp} /> : <FontAwesomeIcon icon={faChevronDown} />}
                 </div>
                 {levelDivOpen && (
                   <div className='levels-list'>
@@ -88,15 +88,32 @@ function Navbar({ setFilter }) {
       <aside className='sidebar-mobile'>
         <div className="sidebar-content">
           <div className='filters-div'>
-                <input
-                    value={search}
-                    onChange={handleChange}
-                    type='text'
-                    className='searchbar'
-                    placeholder='Search for jobs...'
-                    spellCheck='false'>
-                </input>
-            <div className='filters'></div>
+            <input
+                value={search}
+                onChange={handleChange}
+                type='text'
+                className='searchbar'
+                placeholder='Search for jobs...'
+                spellCheck='false'>
+            </input>
+              <form className='filters-form'>
+               <fieldset className='level-container'>
+                <div className='level-toggle-div' onClick={handleLevelDivClick}>
+                  <p>Experience level</p>
+                  {levelDivOpen ? <FontAwesomeIcon icon={faChevronUp} /> : <FontAwesomeIcon icon={faChevronDown} />}
+                </div>
+                {levelDivOpen && (
+                  <div className='levels-list'>
+                    <label>Internship<input type="checkbox" name="" id="" /></label>
+                    <label>Entry<input type="checkbox" name="" id="" /></label>
+                    <label>Mid<input type="checkbox" name="" id="" /></label>
+                    <label>Senior<input type="checkbox" name="" id="" /></label>
+                    <label>Management<input type="checkbox" name="" id="" /></label>
+                  </div>
+                )}
+              </fieldset>
+
+            </form>
           </div>
           <div className="icons-container">
             <a href="#" className='social-icon'><FontAwesomeIcon icon={faFacebookF} /></a>
