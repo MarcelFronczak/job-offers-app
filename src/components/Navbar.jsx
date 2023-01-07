@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import './Navbar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser, faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faBars, faXmark, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 function Navbar({ setFilter }) {
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState('');
+  const [levelDivOpen, setLevelDivOpen] = useState(false);
 
   const handleClick = () => {
     setOpen(!open);
@@ -17,6 +18,10 @@ function Navbar({ setFilter }) {
       setSearch(e.target.value);
       setFilter(e.target.value);
       console.log(search);
+  }
+
+  function handleLevelDivClick() {
+    setLevelDivOpen(!levelDivOpen);
   }
 
   return (
@@ -51,7 +56,26 @@ function Navbar({ setFilter }) {
                     placeholder='Search for jobs...'
                     spellCheck='false'>
                 </input>
-            <div className='filters'></div>
+
+            <form className='filters-form'>
+              <fieldset className='level-container'>
+                <div className='level-toggle-div' onClick={handleLevelDivClick}>
+                  <p>Experience level</p>
+                  <FontAwesomeIcon icon={faChevronDown} />
+                </div>
+                {levelDivOpen && (
+                  <div className='levels-list'>
+                    <label>Internship<input type="checkbox" name="" id="" /></label>
+                    <label>Entry<input type="checkbox" name="" id="" /></label>
+                    <label>Mid<input type="checkbox" name="" id="" /></label>
+                    <label>Senior<input type="checkbox" name="" id="" /></label>
+                    <label>Management<input type="checkbox" name="" id="" /></label>
+                  </div>
+                )}
+              </fieldset>
+
+            </form>
+
           </div>
           <div className="icons-container">
             <a href="#" className='social-icon'><FontAwesomeIcon icon={faFacebookF} /></a>
