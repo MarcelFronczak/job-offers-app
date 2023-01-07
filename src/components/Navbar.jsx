@@ -8,6 +8,7 @@ function Navbar({ setFilter }) {
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState('');
   const [levelDivOpen, setLevelDivOpen] = useState(false);
+  const [levelFilters, setLevelFilters] = useState([]);
 
   const handleClick = () => {
     setOpen(!open);
@@ -22,6 +23,10 @@ function Navbar({ setFilter }) {
 
   function handleLevelDivClick() {
     setLevelDivOpen(!levelDivOpen);
+  }
+
+  function handleLevelChange(e) {
+    console.log(e.target.checked)
   }
 
   return (
@@ -58,7 +63,7 @@ function Navbar({ setFilter }) {
                 </input>
 
             <form className='filters-form'>
-              
+
               <fieldset className='level-container'>
                 <div className='level-toggle-div' onClick={handleLevelDivClick}>
                   <p>Experience level</p>
@@ -66,11 +71,26 @@ function Navbar({ setFilter }) {
                 </div>
                 {levelDivOpen && (
                   <div className='levels-list'>
-                    <label>Internship<input type="checkbox" name="" id="" /></label>
-                    <label>Entry<input type="checkbox" name="" id="" /></label>
-                    <label>Mid<input type="checkbox" name="" id="" /></label>
-                    <label>Senior<input type="checkbox" name="" id="" /></label>
-                    <label>Management<input type="checkbox" name="" id="" /></label>
+                    <label onChange={handleLevelChange} value='internship'>
+                      Internship
+                      <input type="checkbox" name="" id="internship" value='internship'/>
+                    </label>
+                    <label onChange={handleLevelChange} value='entry'>
+                      Entry
+                      <input type="checkbox" name="" id="entry" />
+                    </label>
+                    <label onChange={handleLevelChange} value='mid'>
+                      Mid
+                      <input type="checkbox" name="" id="mid" />
+                    </label>
+                    <label onChange={handleLevelChange} value='senior'>
+                      Senior
+                      <input type="checkbox" name="" id="senior" />
+                    </label>
+                    <label onChange={handleLevelChange} value='management'>
+                      Management
+                      <input type="checkbox" name="" id="management" />
+                    </label>
                   </div>
                 )}
               </fieldset>
