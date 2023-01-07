@@ -96,11 +96,6 @@
 
 .searchbar {
     background: #F7F9F4;
-    -webkit-box-shadow: 2px 2px 25px 1px rgba(0, 0, 0, 0.12);
-    -moz-box-shadow: 2px 4px 25px 1px rgba(0, 0, 0, 0.12);
-    -ms-box-shadow: 2px 4px 25px 1px rgba(0, 0, 0, 0.12);
-    -o-box-shadow: 2px 4px 25px 1px rgba(0, 0, 0, 0.12);
-    box-shadow: 2px 4px 25px 1px rgba(0, 0, 0, 0.12);
     border-radius: 25px;
     padding: 8px 18px;
     outline: none;
@@ -108,6 +103,15 @@
     color: var(--color-primary-dark);
     font-size: 12px;
     caret-color: var(--color-accent-red);
+}
+
+.searchbar-shadow-wrap {
+    border-radius: 25px;
+    -webkit-box-shadow: 2px 2px 25px 1px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 2px 4px 25px 1px rgba(0, 0, 0, 0.12);
+    -ms-box-shadow: 2px 4px 25px 1px rgba(0, 0, 0, 0.12);
+    -o-box-shadow: 2px 4px 25px 1px rgba(0, 0, 0, 0.12);
+    box-shadow: 2px 4px 25px 1px rgba(0, 0, 0, 0.12);
 }
 
 .searchbar::placeholder {

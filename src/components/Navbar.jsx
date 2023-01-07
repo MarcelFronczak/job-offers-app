@@ -53,6 +53,7 @@ function Navbar({ setFilter }) {
       <aside className='sidebar'>
         <div className="sidebar-content">
           <div className='filters-div'>
+            <div className="searchbar-shadow-wrap">
                 <input
                     value={search}
                     onChange={handleChange}
@@ -61,6 +62,7 @@ function Navbar({ setFilter }) {
                     placeholder='Search for jobs...'
                     spellCheck='false'>
                 </input>
+              </div>
 
             <form className='filters-form'>
 
@@ -109,16 +111,18 @@ function Navbar({ setFilter }) {
       <aside className='sidebar-mobile'>
         <div className="sidebar-content">
           <div className='filters-div'>
-            <input
-                value={search}
-                onChange={handleChange}
-                type='text'
-                className='searchbar'
-                placeholder='Search for jobs...'
-                spellCheck='false'>
-            </input>
-              <form className='filters-form'>
-               <fieldset className='level-container'>
+            <div className="searchbar-shadow-wrap">
+              <input
+                  value={search}
+                  onChange={handleChange}
+                  type='text'
+                  className='searchbar'
+                  placeholder='Search for jobs...'
+                  spellCheck='false'>
+              </input>
+            </div>
+            <form className='filters-form'>
+             <fieldset className='level-container'>
                 <div className='level-toggle-div' onClick={handleLevelDivClick}>
                   <p>Experience level</p>
                   {levelDivOpen ? <FontAwesomeIcon icon={faChevronUp} /> : <FontAwesomeIcon icon={faChevronDown} />}
