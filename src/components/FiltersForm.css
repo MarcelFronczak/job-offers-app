@@ -65,13 +65,15 @@
 }
 
 .form-buttons button {
-    width: 45px;
-    height: 25px;
+    width: 50px;
+    height: 28px;
     text-align: center;
     cursor: pointer;
     font-size: 12px;
     font-weight: 500;
     margin-inline: 5px;
+    border-radius: 2px;
+    background-color: #F7F9F4;
 }
 
 .submit-btn {
