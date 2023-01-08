@@ -74,23 +74,23 @@ function Navbar({ setFilter }) {
                 <div className={levelDivOpen ? 'list-visible' : 'list-not-visible'}>
                     <label onChange={handleLevelChange} value='internship'>
                       Internship
-                      <input type="checkbox" name="" id="internship" value='internship'/>
+                      <input type="checkbox" id="internship" name='internship'/>
                     </label>
                     <label onChange={handleLevelChange} value='entry'>
                       Entry
-                      <input type="checkbox" name="" id="entry" />
+                      <input type="checkbox" id="entry" name='entry'/>
                     </label>
                     <label onChange={handleLevelChange} value='mid'>
                       Mid
-                      <input type="checkbox" name="" id="mid" />
+                      <input type="checkbox" id="mid" name='mid'/>
                     </label>
                     <label onChange={handleLevelChange} value='senior'>
                       Senior
-                      <input type="checkbox" name="" id="senior" />
+                      <input type="checkbox" id="senior" name='senior'/>
                     </label>
                     <label onChange={handleLevelChange} value='management'>
                       Management
-                      <input type="checkbox" name="" id="management" />
+                      <input type="checkbox" id="management" name='management'/>
                     </label>
                   </div>
               </fieldset>
@@ -128,25 +128,25 @@ function Navbar({ setFilter }) {
                 </div>
 
                   <div className={levelDivOpen ? 'list-visible' : 'list-not-visible'}>
-                    <label onChange={handleLevelChange} value='internship'>
+                  <label onChange={handleLevelChange} value='internship'>
                       Internship
-                      <input type="checkbox" name="" id="internship" value='internship'/>
+                      <input type="checkbox" id="internship" name='internship'/>
                     </label>
                     <label onChange={handleLevelChange} value='entry'>
                       Entry
-                      <input type="checkbox" name="" id="entry" />
+                      <input type="checkbox" id="entry" name='entry'/>
                     </label>
                     <label onChange={handleLevelChange} value='mid'>
                       Mid
-                      <input type="checkbox" name="" id="mid" />
+                      <input type="checkbox" id="mid" name='mid'/>
                     </label>
                     <label onChange={handleLevelChange} value='senior'>
                       Senior
-                      <input type="checkbox" name="" id="senior" />
+                      <input type="checkbox" id="senior" name='senior'/>
                     </label>
                     <label onChange={handleLevelChange} value='management'>
                       Management
-                      <input type="checkbox" name="" id="management" />
+                      <input type="checkbox" id="management" name='management'/>
                     </label>
                   </div>
               
