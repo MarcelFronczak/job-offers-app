@@ -2,13 +2,12 @@ import React, { useState } from 'react'
 import './Navbar.css'
 import FiltersForm from './FiltersForm'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser, faBars, faXmark, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 function Navbar({ setSearchbarFilter }) {
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState('');
-  // const [levelDivOpen, setLevelDivOpen] = useState(false);
   const [levelFilters, setLevelFilters] = useState([]);
 
   const handleClick = () => {
