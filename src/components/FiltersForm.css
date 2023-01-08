@@ -56,3 +56,30 @@
 .list-visible label:hover {
     background-color: #eff1eb;
 }
+
+.form-buttons {
+    margin-top: 1.5rem;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.form-buttons button {
+    width: 45px;
+    height: 25px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    margin-inline: 5px;
+}
+
+.submit-btn {
+    color: #556198;
+    border: 1px solid #556198;
+}
+
+.clear-btn {
+    color: #F56457;
+    border: 1px solid #F56457;
+}
