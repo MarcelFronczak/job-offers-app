@@ -8,7 +8,7 @@ const App = () => {
    
   return (
     <div>
-      <Navbar setFilter={ setSearchbarFilter } />
+      <Navbar setSearchbarFilter={ setSearchbarFilter } />
       <main>
         <OffersList searchbarFilter={ searchbarFilter }/>
       </main>
