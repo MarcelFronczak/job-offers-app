@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './FiltersForm.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 
