@@ -5,7 +5,7 @@ Live page at: https://marcelfronczak.github.io/job-offers-app/
 Functions: 
 - Displaying fetched job offers 
 - Offer description on click
-- Offers filtering via sidebar's searchbar
+- Offers filtering through sidebar's searchbar
 - Responsive design
 
 Functions to be added:
