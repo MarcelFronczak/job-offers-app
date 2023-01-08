@@ -7,7 +7,7 @@ function OffersList({ filter }) {
     const [offers, setOffers] = useState([]);
     const [loading, setLoading] = useState(true);
     // const [page, setPage] = useState(1);
-    const API_URL = "https://www.themuse.com/api/public/jobs?page=1"; 
+    const API_URL = "https://www.themuse.com/api/public/jobs?page=99"; 
 
     useEffect(() => {
         axios.get(API_URL)
