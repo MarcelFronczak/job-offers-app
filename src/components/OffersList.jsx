@@ -3,7 +3,7 @@ import axios from 'axios'
 import Offer from './Offer';
 import './OffersList.css'
 
-function OffersList({ filter }) {
+function OffersList({ searchbarFilter }) {
     const [offers, setOffers] = useState([]);
     const [loading, setLoading] = useState(true);
     // const [page, setPage] = useState(1);
@@ -13,7 +13,7 @@ function OffersList({ filter }) {
         axios.get(API_URL)
             .then(res => {
                 const data = res.data.results.filter((offer) => {
-                if (offer.name.toLowerCase().includes(filter)) {
+                if (offer.name.toLowerCase().includes(searchbarFilter)) {
                   return offer;
                 }
               });
@@ -26,7 +26,7 @@ function OffersList({ filter }) {
               console.log(err)
               setLoading(false);
             })
-    }, [filter])
+    }, [searchbarFilter])
 
   return (
     <div className='offers-container'>

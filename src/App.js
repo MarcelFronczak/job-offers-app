@@ -4,13 +4,13 @@ import Navbar from "./components/Navbar";
 import OffersList from './components/OffersList';
 
 const App = () => {
-  const [filter, setFilter] = useState('');
+  const [searchbarFilter, setSearchbarFilter] = useState('');
    
   return (
     <div>
-      <Navbar setFilter={ setFilter } />
+      <Navbar setFilter={ setSearchbarFilter } />
       <main>
-        <OffersList filter={ filter }/>
+        <OffersList searchbarFilter={ searchbarFilter }/>
       </main>
     </div>
   )

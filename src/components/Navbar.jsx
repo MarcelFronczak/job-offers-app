@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faBars, faXmark, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
 
-function Navbar({ setFilter }) {
+function Navbar({ setSearchbarFilter }) {
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState('');
   const [levelDivOpen, setLevelDivOpen] = useState(false);
@@ -17,7 +17,7 @@ function Navbar({ setFilter }) {
 
   function handleChange(e) {
       setSearch(e.target.value);
-      setFilter(e.target.value);
+      setSearchbarFilter(e.target.value);
       console.log(search);
   }
 
