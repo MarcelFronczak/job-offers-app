@@ -8,7 +8,6 @@ import { faFacebookF, faLinkedinIn, faGithub } from '@fortawesome/free-brands-sv
 function Navbar({ setSearchbarFilter }) {
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState('');
-  const [levelFilters, setLevelFilters] = useState([]);
 
   const handleClick = () => {
     setOpen(!open);
@@ -63,7 +62,6 @@ function Navbar({ setSearchbarFilter }) {
             <a target='_blank' href="https://www.linkedin.com/in/marcel-fronczak-88523022b/" className='social-icon'><FontAwesomeIcon icon={faLinkedinIn} /></a>
           </div>
         </div>
-    
     </aside>
       {/* Mobile sidebar */}
       <aside className={open ? 'sidebar-mobile' : 'sidebar-mobile-hidden'}>
