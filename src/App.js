@@ -1,16 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import Navbar from "./components/Navbar";
 import OffersList from './components/OffersList';
 
 const App = () => {
   const [searchbarFilter, setSearchbarFilter] = useState('');
+  const [level, setLevel] = useState([]);
    
   return (
     <div>
-      <Navbar setSearchbarFilter={ setSearchbarFilter } />
+      <Navbar setSearchbarFilter={ setSearchbarFilter } setLevel={ setLevel }/>
       <main>
-        <OffersList searchbarFilter={ searchbarFilter }/>
+        <OffersList searchbarFilter={ searchbarFilter } level={ level }/>
       </main>
     </div>
   )

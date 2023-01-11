@@ -3,7 +3,7 @@ import './FiltersForm.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 
-function FiltersForm() {
+function FiltersForm({ setLevel }) {
     const [levelDivOpen, setLevelDivOpen] = useState(false);
     const [levelFilterArr, setLevelFilterArr] = useState([]);
     const ref = useRef([]);
@@ -16,14 +16,16 @@ function FiltersForm() {
         if (e.target.checked) {
             setLevelFilterArr(arr => [...arr, e.target.name]);
             
+            
         } else {
             setLevelFilterArr(arr => arr.filter(item => item !== e.target.name))
         }
-        console.log(levelFilterArr);
     }
 
-    function handleBtnClick(e) {
+    function handleSaveClick(e) {
         e.preventDefault();
+
+        setLevel(levelFilterArr);
     }
 
     function handleClearClick(e) {
@@ -34,8 +36,7 @@ function FiltersForm() {
             ref.current[i].checked = false;
         }
         // Clearing filters state
-        setLevelFilterArr([]);
-        console.log(levelFilterArr);
+        setLevel(setLevelFilterArr([]));
     }
 
     return (
@@ -44,6 +45,7 @@ function FiltersForm() {
             <div className='level-toggle-div' onClick={handleLevelDivClick}>
               <p>Experience level</p>
               {levelDivOpen ? <FontAwesomeIcon icon={faChevronUp} /> : <FontAwesomeIcon icon={faChevronDown} />}
+              {levelFilterArr.length != 0 && <p className='counter'>{levelFilterArr.length}</p>}
             </div>
             <div className={levelDivOpen ? 'list-visible' : 'list-not-visible'}>
                 <label onChange={handleLevelChange} value='internship'>
@@ -70,7 +72,7 @@ function FiltersForm() {
           </fieldset>
         
         <div className="form-buttons">
-            <button className="submit-btn" onClick={handleBtnClick}>Save</button>
+            <button className="submit-btn" onClick={handleSaveClick}>Save</button>
             <button className='clear-btn' onClick={handleClearClick}>Clear</button>
         </div>
       </form>

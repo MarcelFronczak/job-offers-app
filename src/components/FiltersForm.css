@@ -7,6 +7,7 @@
 }
 
 .level-toggle-div {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -31,6 +32,22 @@
        -moz-user-select: none;
         -ms-user-select: none; 
             user-select: none;
+}
+
+.counter {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    height: 16px;
+    width: 16px;
+    font-size: 12px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #F56457;
+    color: #F7F9F4;
 }
 
 .list-not-visible {

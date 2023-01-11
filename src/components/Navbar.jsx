@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
 
-function Navbar({ setSearchbarFilter }) {
+function Navbar({ setSearchbarFilter, setLevel }) {
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState('');
 
@@ -54,7 +54,7 @@ function Navbar({ setSearchbarFilter }) {
                     spellCheck='false'>
                 </input>
               </div>
-            <FiltersForm />
+            <FiltersForm setLevel={setLevel}/>
           </div>
           <div className="icons-container">
             <a href="#" className='social-icon'><FontAwesomeIcon icon={faFacebookF} /></a>
@@ -77,7 +77,7 @@ function Navbar({ setSearchbarFilter }) {
                   spellCheck='false'>
               </input>
             </div>
-            <FiltersForm />
+            <FiltersForm setLevel={setLevel}/>
           </div>
           <div className="icons-container">
             <a href="#" className='social-icon'><FontAwesomeIcon icon={faFacebookF} /></a>

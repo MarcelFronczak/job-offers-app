@@ -3,7 +3,7 @@ import axios from 'axios'
 import Offer from './Offer';
 import './OffersList.css'
 
-function OffersList({ searchbarFilter }) {
+function OffersList({ searchbarFilter, level }) {
     const [offers, setOffers] = useState([]);
     const [loading, setLoading] = useState(true);
     // const [page, setPage] = useState(1);
@@ -20,13 +20,16 @@ function OffersList({ searchbarFilter }) {
               setLoading(false)
               setOffers(data);
               console.log(data);
+              console.log(level)
               
             })
             .catch(err => {
               console.log(err)
               setLoading(false);
             })
-    }, [searchbarFilter])
+            // console.log(searchbarFilter)
+            
+    }, [searchbarFilter, level])
 
   return (
     <div className='offers-container'>
