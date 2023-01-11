@@ -101,6 +101,7 @@
     border-radius: 2px;
     background-color: #F7F9F4;
     -webkit-appearance: none;
+    appearance: none;
 }
 
 .submit-btn {
