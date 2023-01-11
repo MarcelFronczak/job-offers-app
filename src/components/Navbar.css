@@ -145,10 +145,14 @@
     box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.12);
 }
 
-.sidebar-mobile-hidden {
-    display: none;
-    right: 100%;
-    transition: all 0.3s ease;
+.sidebar-mobile.hidden {
+    right: -100%;
+}
+
+@media screen and (min-width: 821px) {
+    .sidebar-mobile.hidden {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 820px) {
@@ -174,6 +178,7 @@
         background-color: var(--color-primary-light);
         box-shadow: -2px 0px 25px rgba(0, 0, 0, 0.15);
         z-index: 1;
+        transition: all 0.3s ease-in-out;
     }
 
     .bars, .xmark {

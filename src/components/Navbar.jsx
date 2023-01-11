@@ -64,7 +64,7 @@ function Navbar({ setSearchbarFilter, setLevel }) {
         </div>
     </aside>
       {/* Mobile sidebar */}
-      <aside className={open ? 'sidebar-mobile' : 'sidebar-mobile-hidden'}>
+      <aside className={open ? 'sidebar-mobile' : 'sidebar-mobile hidden'}>
         <div className="sidebar-content">
           <div className='filters-div'>
             <div className="searchbar-shadow-wrap">
@@ -86,7 +86,6 @@ function Navbar({ setSearchbarFilter, setLevel }) {
           </div>
         </div>
       </aside>
-      )
     </>
   )
 }

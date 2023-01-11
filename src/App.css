@@ -64,6 +64,9 @@ main {
     .offers-container {
         padding-top: 3rem !important;
     }
+    .columns {
+        min-height: 70px;
+    }
     .offers-heading {
         font-size: 32px !important;
     }
