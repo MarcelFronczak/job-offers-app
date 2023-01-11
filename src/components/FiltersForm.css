@@ -24,6 +24,15 @@
     cursor: pointer;
 }
 
+.level-toggle-div p {
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none; 
+            user-select: none;
+}
+
 .list-not-visible {
     display: none;
 }
@@ -74,6 +83,7 @@
     margin-inline: 5px;
     border-radius: 2px;
     background-color: #F7F9F4;
+    -webkit-appearance: none;
 }
 
 .submit-btn {
