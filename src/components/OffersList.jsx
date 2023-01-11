@@ -10,6 +10,7 @@ function OffersList({ searchbarFilter, level }) {
     const API_URL = "https://www.themuse.com/api/public/jobs?page=99"; 
 
     useEffect(() => {
+      setLoading(true)
         axios.get(API_URL)
             .then(res => {
                 const data = res.data.results.filter((offer) => {
@@ -18,14 +19,11 @@ function OffersList({ searchbarFilter, level }) {
                 }
               });
               setLoading(false)
-              setOffers(data);
-              console.log(data);
-              console.log(level)
-              
+              setOffers(data)
             })
             .catch(err => {
               console.log(err)
-              setLoading(false);
+              setLoading(false)
             })
             // console.log(searchbarFilter)
             
