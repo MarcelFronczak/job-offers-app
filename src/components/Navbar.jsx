@@ -11,13 +11,11 @@ function Navbar({ setSearchbarFilter, setLevel }) {
 
   const handleClick = () => {
     setOpen(!open);
-    console.log({open})
   }
 
   function handleChange(e) {
       setSearch(e.target.value);
       setSearchbarFilter(e.target.value);
-      console.log(search);
   }
 
   return (
