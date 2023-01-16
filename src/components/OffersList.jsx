@@ -7,12 +7,6 @@ function OffersList({ searchbarFilter, level }) {
     const [offers, setOffers] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    function getLevelString(levelFilter) {
-      for (let i = 0; i < levelFilter.lenth; i++) {
-
-      }
-    }
-
     useEffect(() => {
       setLoading(true)
         axios.get(`https://www.themuse.com/api/public/jobs?${level}page=99`)
