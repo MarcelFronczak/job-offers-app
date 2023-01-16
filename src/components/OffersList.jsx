@@ -7,11 +7,19 @@ function OffersList({ searchbarFilter, level }) {
     const [offers, setOffers] = useState([]);
     const [loading, setLoading] = useState(true);
     // const [page, setPage] = useState(1);
-    const API_URL = "https://www.themuse.com/api/public/jobs?page=99"; 
+    const API_URL = "https://www.themuse.com/api/public/jobs?page=1";
+
+    const lvl = 'level=Entry%20Level&';
+
+    function getLevelString(levelFilter) {
+      for (let i = 0; i < levelFilter.lenth; i++) {
+
+      }
+    }
 
     useEffect(() => {
       setLoading(true)
-        axios.get(API_URL)
+        axios.get(`https://www.themuse.com/api/public/jobs?${level}page=1`)
             .then(res => {
                 const data = res.data.results.filter((offer) => {
                 if (offer.name.toLowerCase().includes(searchbarFilter.toLowerCase())) {
@@ -25,7 +33,7 @@ function OffersList({ searchbarFilter, level }) {
               console.log(err)
               setLoading(false)
             })
-            // console.log(searchbarFilter)
+            console.log(level);
             
     }, [searchbarFilter, level])
 
