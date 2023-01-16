@@ -71,6 +71,9 @@
     .offer-heading {
         margin-bottom: 8px;
     }
+    .offer-container:hover {
+        transform: translateX(0px);
+    }
     .col-right {
         flex-direction: column-reverse;
         align-items: flex-end;
