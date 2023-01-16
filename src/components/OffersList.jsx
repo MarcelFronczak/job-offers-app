@@ -9,7 +9,7 @@ function OffersList({ searchbarFilter, level }) {
 
     useEffect(() => {
       setLoading(true)
-        axios.get(`https://www.themuse.com/api/public/jobs?${level}page=99`)
+        axios.get(`https://www.themuse.com/api/public/jobs?${level}page=1`)
             .then(res => {
                 const data = res.data.results.filter((offer) => {
                 if (offer.name.toLowerCase().includes(searchbarFilter.toLowerCase())) {

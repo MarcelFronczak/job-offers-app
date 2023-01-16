@@ -81,7 +81,7 @@ function Offer({ offer }) {
           <div className='right-col'>
             <p className='salary'>{salary}</p>
             <p className='level'>{levelUpper}</p>
-            </div>
+          </div>
           <FontAwesomeIcon icon={faHeart} className='save-btn' onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} onClick={toggle} style={saveBtnStyle}/>
         </div>
         {details && <div className='description' dangerouslySetInnerHTML={createMarkup()}></div>}

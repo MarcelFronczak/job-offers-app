@@ -47,25 +47,21 @@ function FiltersForm({ setLevel }) {
               {levelFilterArr.length != 0 && <p className='counter'>{levelFilterArr.length}</p>}
             </div>
             <div className={levelDivOpen ? 'list-visible' : 'list-not-visible'}>
-                <label onChange={handleLevelChange} value='Internship&'>
+                <label onChange={handleLevelChange} value='internship'>
                   Internship
                   <input type="checkbox" id="internship" name='level=Internship&' ref={(element) => { ref.current[0] = element }}/>
                 </label>
-                <label onChange={handleLevelChange} value='Entry%20Level&'>
+                <label onChange={handleLevelChange} value='entry'>
                   Entry
                   <input type="checkbox" id="entry" name='level=Entry%20Level&' ref={(element) => { ref.current[1] = element }}/>
                 </label>
-                <label onChange={handleLevelChange} value='Mid%20Level&'>
+                <label onChange={handleLevelChange} value='mid'>
                   Mid
                   <input type="checkbox" id="mid" name='level=Mid%20Level&' ref={(element) => { ref.current[2] = element }}/>
                 </label>
-                <label onChange={handleLevelChange} value='Senior%20Level&'>
+                <label onChange={handleLevelChange} value='senior'>
                   Senior
                   <input type="checkbox" id="senior" name='level=Senior%20Level&' ref={(element) => { ref.current[3] = element }}/>
-                </label>
-                <label onChange={handleLevelChange} value='management'>
-                  Management
-                  <input type="checkbox" id="management" name='level=management' ref={(element) => { ref.current[4] = element }}/>
                 </label>
               </div>
           </fieldset>
