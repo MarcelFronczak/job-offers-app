@@ -14,7 +14,7 @@ function OffersList({ searchbarFilter, level }) {
         axios.get(API_URL)
             .then(res => {
                 const data = res.data.results.filter((offer) => {
-                if (offer.name.toLowerCase().includes(searchbarFilter)) {
+                if (offer.name.toLowerCase().includes(searchbarFilter.toLowerCase())) {
                   return offer;
                 }
               });
