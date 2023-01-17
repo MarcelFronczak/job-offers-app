@@ -10,6 +10,51 @@
     text-align: center;
 }
 
+.page-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.page-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 10px;
+    height: 27px;
+    width: 88px;
+    border: none;
+    color: #F7F9F4;
+    background-color: #F67568;
+    border-radius: 3px;
+}
+
+.page-btn:hover {
+    opacity: .95;
+}
+
+.caret-left {
+    margin-right: 4px;
+    transition: all 0.2s ease;
+}
+
+.caret-right {
+    margin-left: 4px;
+    transition: all 0.2s ease;
+}
+
+.previous-btn:hover .caret-left {
+    transform: translateX(-2px);
+}
+
+.next-btn:hover .caret-right {
+    transform: translateX(2px);
+}
+
 .loading-box {
     width: 100%;
 }
