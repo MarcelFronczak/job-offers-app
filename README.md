@@ -3,7 +3,7 @@ JobFinder React App using TheMuse API - project in progress
 Live page at: https://marcelfronczak.github.io/job-offers-app/
 
 Functions: 
-- Displaying fetched job offers 
+- API to provide job and company listings
 - Offers filtering through searchbar
 - Offers filtering by experience level
 - Pagination (previous / next page buttons)
@@ -11,6 +11,6 @@ Functions:
 - Responsive design
 
 Functions to be added:
-- Firebase to store user's data
-- Possibility to save particular offers after logging
+- Firebase Authentication
+- Firebase Realtime Databse to store saved offers
 - Category filter
