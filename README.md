@@ -1,4 +1,4 @@
-JobFinder React App using API - project in progress
+JobFinder React App using TheMuse API - project in progress
 
 Live page at: https://marcelfronczak.github.io/job-offers-app/
 
