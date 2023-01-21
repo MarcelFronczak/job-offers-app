@@ -66,7 +66,7 @@ function OffersList({ searchbarFilter, level }) {
         )
       }
       {
-        loading === false && (
+        loading === false && offers.length !== 0 &&(
           <div className='page-buttons'>
             { page > 1 &&
               (
