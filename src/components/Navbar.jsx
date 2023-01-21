@@ -75,7 +75,7 @@ function Navbar({ setSearchbarFilter, setLevel }) {
                   spellCheck='false'>
               </input>
             </div>
-            <FiltersForm setLevel={setLevel}/>
+            <FiltersForm setLevel={setLevel} open={open} setOpen={setOpen} />
           </div>
           <div className="icons-container">
             <a href="#" className='social-icon'><FontAwesomeIcon icon={faFacebookF} /></a>

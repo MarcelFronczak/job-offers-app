@@ -3,7 +3,7 @@ import './FiltersForm.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 
-function FiltersForm({ setLevel }) {
+function FiltersForm({ setLevel, open, setOpen}) {
     const [levelDivOpen, setLevelDivOpen] = useState(false);
     const [levelFilterArr, setLevelFilterArr] = useState([]);
     const ref = useRef([]);
@@ -24,6 +24,8 @@ function FiltersForm({ setLevel }) {
         e.preventDefault();
 
         setLevel(levelFilterArr.join(''));
+        setLevelDivOpen(!levelDivOpen);
+        setOpen(!open);
     }
 
     function handleClearClick(e) {
@@ -36,6 +38,7 @@ function FiltersForm({ setLevel }) {
         // Clearing filters states
         setLevelFilterArr('')
         setLevel('');
+        setLevelDivOpen(false);
     }
 
     return (
