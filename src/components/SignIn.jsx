@@ -21,6 +21,10 @@ function SignIn() {
         color: '#A3A8C1',
         fontSize: '19px'
     }
+
+    const GoogleClick = () => {
+      alert("Function will be added soon ;)")
+    }
     
   return (
     <div className="signin-page">
@@ -35,7 +39,7 @@ function SignIn() {
       <div className={loaded ? 'signin-form active' : 'signin-form'}>
         <Link classname='xmark-link' to='/job-offers-app' style={xMarkStyle}><FontAwesomeIcon icon={faXmark} classname='x'/></Link>
         <h1>Sign In</h1>
-        <GoogleButton className='google-btn'/>
+        <GoogleButton className='google-btn' onClick={GoogleClick}/>
       </div>
     </div>
   )

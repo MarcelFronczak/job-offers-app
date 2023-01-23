@@ -60,8 +60,17 @@
 }
 
 .btn-sign-in {
-    background: var(--color-accent-red);
-    border-radius: 0 25px 25px 0;
+    background: #1f264a;
+    color: var(--color-accent-red);
+    border-radius: 20px 8px 20px 8px;
+    border: 1px solid var(--color-accent-red);
+    transition: all 0.19s;
+}
+
+.btn-sign-in:hover {
+    background: linear-gradient(75deg, rgba(245,100,87,1) 0%, rgb(248, 54, 36) 100%);
+    color: #1f264a;
+    border-radius: 15px 5px 15px 5px;
 }
 
 .bars, .xmark {
