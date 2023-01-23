@@ -1,0 +1,44 @@
+.signin-page {
+    height: 100%;
+    text-align: center;
+    padding: 2rem 8vw;
+    overflow: hidden;
+    background-color: #F7F9F4;
+}
+
+.signin-form {
+    border-radius: 32px;
+    padding: 2rem 1.5rem;
+    max-width: 525px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    margin: 20vh auto 0;
+    text-align: center;
+
+    box-shadow: 1px 1px 25px 4px rgba(57, 61, 80, 0.15);
+}
+
+.signin-form:hover {
+    box-shadow: 1px 1px 25px 3px rgba(245, 100, 87, 0.19);
+}
+
+.signin-form h1 {
+    display: inherit;
+    margin: 0 auto;
+    position: relative;
+}
+
+.signin-form h1::after {
+    content: '';
+    position: absolute;
+    width: 70%;
+    height: 2px;
+    background-color: #F56457;
+    left: 15%;
+    bottom: -4px;
+}
+
+.google-btn {
+    margin: auto auto;
+}

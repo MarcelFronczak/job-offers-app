@@ -4,6 +4,7 @@ import FiltersForm from './FiltersForm'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { Link } from 'react-router-dom'
 
 function Navbar({ setSearchbarFilter, setLevel }) {
   const [open, setOpen] = useState(false);
@@ -22,10 +23,12 @@ function Navbar({ setSearchbarFilter, setLevel }) {
     <>
       <nav className='navbar'>
           <div className='navbar-items'>
+              <Link to="/job-offers-app" style={{ textDecoration: 'none' }}>
               <a className='logo' href='#'>
                   <FontAwesomeIcon icon={faUser} className='logo-icon'/>
                   <h1 className='logo-text'>Job<span className='logo-span'>Finder</span></h1>
               </a>
+              </Link>
               <div className='nav-btns'>
                 <div className='buttons'>
                     <button className='cta btn-sign-up'>Sign Up</button>

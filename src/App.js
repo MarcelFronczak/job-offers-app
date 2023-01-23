@@ -1,19 +1,16 @@
 import React, { useState } from 'react';
 import './App.css';
-import Navbar from "./components/Navbar";
-import OffersList from './components/OffersList';
+import { Route, Routes} from 'react-router-dom'
+import Home from './components/Home'
+import SignIn from './components/SignIn'
 
 const App = () => {
-  const [searchbarFilter, setSearchbarFilter] = useState('');
-  const [level, setLevel] = useState([]);
    
   return (
-    <div>
-      <Navbar setSearchbarFilter={ setSearchbarFilter } setLevel={ setLevel }/>
-      <main>
-        <OffersList searchbarFilter={ searchbarFilter } level={ level }/>
-      </main>
-    </div>
+    <Routes>
+      <Route path="/job-offers-app" element={<Home />} />
+      <Route path="/job-offers-app/signin" element={<SignIn />} />
+    </Routes>
   )
 }
 
