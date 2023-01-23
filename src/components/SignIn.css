@@ -15,8 +15,9 @@
     flex-direction: column;
     margin: 20vh auto 0;
     text-align: center;
+    position: relative;
 
-    box-shadow: 1px 1px 25px 4px rgba(57, 61, 80, 0.15);
+    box-shadow: 1px 1px 25px 4px rgba(57, 61, 80, 0.12);
 }
 
 .signin-form:hover {
@@ -41,4 +42,9 @@
 
 .google-btn {
     margin: auto auto;
+    opacity: 0.95;
+}
+
+.xmark-link {
+    color: pink;
 }
