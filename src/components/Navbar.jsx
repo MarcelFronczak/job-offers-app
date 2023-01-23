@@ -32,7 +32,7 @@ function Navbar({ setSearchbarFilter, setLevel }) {
               <div className='nav-btns'>
                 <div className='buttons'>
                     <button className='cta btn-sign-up'>Sign Up</button>
-                    <button className='cta btn-sign-in'>Sign In</button>
+                    <Link to='/job-offers-app/signin' style={{textDecoration: 'none'}}><button className='cta btn-sign-in'>Sign In</button></Link>
                 </div>
                 {
                   open ? 
