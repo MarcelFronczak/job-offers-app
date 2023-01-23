@@ -1,11 +1,17 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
+import './SignIn.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 import { GoogleButton } from 'react-google-button'
-import './SignIn.css'
 
 function SignIn() {
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    setLoaded(true);
+  }, [])
 
     const xMarkStyle = {
         textDecoration: 'none',
@@ -26,10 +32,9 @@ function SignIn() {
           </a>
         </Link>
       </nav>
-      <div className="signin-form">
+      <div className={loaded ? 'signin-form active' : 'signin-form'}>
         <Link classname='xmark-link' to='/job-offers-app' style={xMarkStyle}><FontAwesomeIcon icon={faXmark} classname='x'/></Link>
         <h1>Sign In</h1>
-        { /*GoogleBtn */ }
         <GoogleButton className='google-btn'/>
       </div>
     </div>
