@@ -54,10 +54,10 @@
     opacity: 0.95;
 }
 
-.btn-sign-up {
+/* .btn-sign-up {
     background: var(--color-accent-beige);
     border-radius: 25px 0 0 25px;
-}
+} */
 
 .btn-sign-in {
     background: #1f264a;
