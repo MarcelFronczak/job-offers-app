@@ -6,11 +6,11 @@ Functions:
 - API to provide job and company listings
 - Offers filtering through searchbar
 - Offers filtering by experience level
+- Firebase Authentication - sign in with google
 - Pagination (previous / next page buttons)
 - Offer description on click
 - Responsive design
 
 Functions to be added:
-- Firebase Authentication
 - Firebase Realtime Databse to store saved offers
 - Category filter
