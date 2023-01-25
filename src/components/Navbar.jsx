@@ -5,10 +5,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { Link } from 'react-router-dom'
+import { UserAuth } from '../context/AuthContext'
 
 function Navbar({ setSearchbarFilter, setLevel }) {
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState('');
+  const { user, logOut } = UserAuth();
 
   const handleClick = () => {
     setOpen(!open);
@@ -17,6 +19,14 @@ function Navbar({ setSearchbarFilter, setLevel }) {
   function handleChange(e) {
       setSearch(e.target.value);
       setSearchbarFilter(e.target.value);
+  }
+
+  const handleSignOut = async () => {
+    try {
+      await logOut();
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   return (
@@ -31,7 +41,10 @@ function Navbar({ setSearchbarFilter, setLevel }) {
               </Link>
               <div className='nav-btns'>
                 <div className='buttons'>
-                    <Link to='/job-offers-app/signin' style={{textDecoration: 'none'}}><button className='cta btn-sign-in'>Sign In</button></Link>
+                    {
+                      user?.displayName ? (<button onClick={handleSignOut} className='cta btn-sign-out'>Sign Out</button>)
+                      : (<Link to='/job-offers-app/signin' style={{textDecoration: 'none'}}><button className='cta btn-sign-in'>Sign In</button></Link>)
+                    }
                 </div>
                 {
                   open ? 
