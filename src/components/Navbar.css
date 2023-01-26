@@ -77,6 +77,70 @@
     border-radius: 15px 5px 15px 5px;
 }
 
+.user-container {
+    position: relative;
+}
+
+.user-account-btn {
+    height: 32px;
+    padding: 4px 6px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border-radius: 12px;
+    font-size: 14px;
+    cursor: pointer;
+    color: var(--color-accent-red);
+    border: 1px solid var(--color-accent-red);
+    background-color: transparent;
+}
+
+.user-account-btn:hover {
+    opacity: 0.96;
+}
+
+.user-account-btn p {
+    font-size: 12px;
+}
+
+.chevron-user {
+    font-size: 12px;
+}
+
+.user-account-details {
+    background-color: var(--color-primary-light);
+    position: absolute;
+    border-radius: 5px;
+    right: 0;
+    top: 40px;
+    width: 150px;
+    padding: 10px 12px;
+
+    -webkit-box-shadow: 2px 2px 25px 5px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 2px 4px 25px 5px rgba(0, 0, 0, 0.15);
+    -ms-box-shadow: 2px 4px 25px 5px rgba(0, 0, 0, 0.15);
+    -o-box-shadow: 2px 4px 25px 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 2px 4px 25px 5px rgba(0, 0, 0, 0.15);
+}
+
+.user-account-details > ul > li {
+    color: var(--color-primary-dark);
+    font-size: 14px;
+    list-style: none;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.user-account-details > ul > li:nth-child(1) {
+    border-bottom: 1px solid #dadada;
+}
+
+.user-account-details > ul > li:hover {
+    color: var(--color-accent-red);
+}
+
 .bars, .xmark {
     color: #EDE5D8;
     cursor: pointer;

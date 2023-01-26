@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Navbar.css'
 import FiltersForm from './FiltersForm'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser, faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faBars, faXmark, faCircleUser, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { Link } from 'react-router-dom'
 import { UserAuth } from '../context/AuthContext'
@@ -11,6 +11,7 @@ function Navbar({ setSearchbarFilter, setLevel }) {
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState('');
   const { user, logOut } = UserAuth();
+  const [userBtnOpen, setUserBtnOpen] = useState(false);
 
   const handleClick = () => {
     setOpen(!open);
@@ -19,6 +20,19 @@ function Navbar({ setSearchbarFilter, setLevel }) {
   function handleChange(e) {
       setSearch(e.target.value);
       setSearchbarFilter(e.target.value);
+  }
+
+  const handleUserBtnClick = () => {
+    setUserBtnOpen(!userBtnOpen);
+  }
+
+  const truncateName = (name) => {
+    var names = name.split(/\s+/);
+
+    names[1] = names[1].substr(0, 1) + ".";
+
+    var name_abbr = names.join(' ');
+    return name_abbr;
   }
 
   const handleSignOut = async () => {
@@ -42,8 +56,25 @@ function Navbar({ setSearchbarFilter, setLevel }) {
               <div className='nav-btns'>
                 <div className='buttons'>
                     {
-                      user?.displayName ? (<button onClick={handleSignOut} className='cta btn-sign-out'>Sign Out</button>)
-                      : (<Link to='/job-offers-app/signin' style={{textDecoration: 'none'}}><button className='cta btn-sign-in'>Sign In</button></Link>)
+                      user?.displayName ? (
+                        <div className="user-container">
+
+                            <button className='user-account-btn' onClick={handleUserBtnClick}>
+                              <FontAwesomeIcon icon={faCircleUser} className='user-btn-icon' />
+                              <p className="user-name-btn">{truncateName(user.displayName)}</p>
+                              {userBtnOpen ? <FontAwesomeIcon icon={faChevronUp} className='chevron-user' /> : <FontAwesomeIcon icon={faChevronDown} className='chevron-user'/> }
+                            </button>
+                            {userBtnOpen && (
+                              <div className="user-account-details">
+                                <ul>
+                                  <li>Saved offers</li>
+                                  <li onClick={handleSignOut}>Log out</li>
+                                </ul>
+                              </div>
+                            )}
+                          {/* <button onClick={handleSignOut} className='cta btn-sign-out'>Sign Out</button> */}
+                        </div>
+                      ) : (<Link to='/job-offers-app/signin' style={{textDecoration: 'none'}}><button className='cta btn-sign-in'>Sign In</button></Link>)
                     }
                 </div>
                 {
