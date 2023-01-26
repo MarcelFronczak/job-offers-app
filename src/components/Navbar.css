@@ -115,8 +115,8 @@
     border-radius: 5px;
     right: 0;
     top: 40px;
-    width: 150px;
-    padding: 10px 12px;
+    width: fit-content;
+    padding: 16px;
 
     -webkit-box-shadow: 2px 2px 25px 5px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 2px 4px 25px 5px rgba(0, 0, 0, 0.15);
@@ -129,16 +129,41 @@
     color: var(--color-primary-dark);
     font-size: 14px;
     list-style: none;
-    padding: 5px 0;
     cursor: pointer;
+
+    transition: all 0.2s ease;
 }
 
 .user-account-details > ul > li:nth-child(1) {
     border-bottom: 1px solid #dadada;
+    padding-bottom: 8px;
+}
+
+.user-account-details > ul > li:nth-child(2) {
+    padding-top: 8px;
 }
 
 .user-account-details > ul > li:hover {
     color: var(--color-accent-red);
+    transform: translateX(3px);
+}
+
+.user-data-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-primary-dark);
+    margin-bottom: 14px;
+}
+
+.user-icon-big {
+    font-size: 28px;
+    margin-right: 12px;
+}
+
+.user-name {
+    font-weight: 400;
 }
 
 .bars, .xmark {

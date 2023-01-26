@@ -43,6 +43,10 @@ function Navbar({ setSearchbarFilter, setLevel }) {
     }
   }
 
+  const handleNoFunction = () => {
+    alert('Function to be added soon ;)');
+  }
+
   return (
     <>
       <nav className='navbar'>
@@ -60,14 +64,22 @@ function Navbar({ setSearchbarFilter, setLevel }) {
                         <div className="user-container">
 
                             <button className='user-account-btn' onClick={handleUserBtnClick}>
+                              
                               <FontAwesomeIcon icon={faCircleUser} className='user-btn-icon' />
                               <p className="user-name-btn">{truncateName(user.displayName)}</p>
                               {userBtnOpen ? <FontAwesomeIcon icon={faChevronUp} className='chevron-user' /> : <FontAwesomeIcon icon={faChevronDown} className='chevron-user'/> }
                             </button>
                             {userBtnOpen && (
                               <div className="user-account-details">
+                                <div className="user-data-container">
+                                <FontAwesomeIcon icon={faCircleUser} className='user-btn-icon user-icon-big' />
+                                <div className="user-data-details">
+                                  <h4 className="user-name">{user.displayName}</h4>
+                                  <p className="user-email">{user.email}</p>
+                                </div>
+                              </div>
                                 <ul>
-                                  <li>Saved offers</li>
+                                  <li onClick={handleNoFunction}>Saved offers</li>
                                   <li onClick={handleSignOut}>Log out</li>
                                 </ul>
                               </div>
