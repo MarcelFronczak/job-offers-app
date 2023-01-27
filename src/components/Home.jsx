@@ -11,7 +11,7 @@ const Home = () => {
     <div>
       <Navbar setSearchbarFilter={ setSearchbarFilter } setLevel={ setLevel } signInAlert={ signInAlert }/>
       <main>
-        <OffersList searchbarFilter={ searchbarFilter } level={ level } setSignInAlert={ setSignInAlert }/>
+        <OffersList searchbarFilter={ searchbarFilter } level={ level } setSignInAlert={ setSignInAlert } signInAlert={ signInAlert}/>
       </main>
     </div>
   )
