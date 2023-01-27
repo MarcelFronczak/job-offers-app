@@ -2,15 +2,18 @@ import React, { useState } from 'react'
 import './Offer.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
+import { UserAuth } from '../context/AuthContext'
 
-function Offer({ offer }) {
+function Offer({ offer, setSignInAlert }) {
   const [clicked, setClicked] = useState(false);
   const [hover, setHover] = useState(false);
   const [details, setDetails] = useState(false);
+  const { user } = UserAuth();
 
-  const toggle = (e) => {
+  const handleSaveClick = (e) => {
     e.stopPropagation()
-    setClicked(!clicked);
+
+    user == null ? setSignInAlert(true) : setClicked(!clicked);
   }
 
   const mouseEnter = () => {
@@ -82,7 +85,7 @@ function Offer({ offer }) {
             <p className='salary'>{salary}</p>
             <p className='level'>{levelUpper}</p>
           </div>
-          <FontAwesomeIcon icon={faHeart} className='save-btn' onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} onClick={toggle} style={saveBtnStyle}/>
+          <FontAwesomeIcon icon={faHeart} className='save-btn' onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} onClick={handleSaveClick} style={saveBtnStyle}/>
         </div>
         {details && <div className='description' dangerouslySetInnerHTML={createMarkup()}></div>}
       </div>

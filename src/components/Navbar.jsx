@@ -7,7 +7,7 @@ import { faFacebookF, faLinkedinIn, faGithub } from '@fortawesome/free-brands-sv
 import { Link } from 'react-router-dom'
 import { UserAuth } from '../context/AuthContext'
 
-function Navbar({ setSearchbarFilter, setLevel }) {
+function Navbar({ setSearchbarFilter, setLevel, signInAlert }) {
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState('');
   const { user, logOut } = UserAuth();
@@ -84,9 +84,16 @@ function Navbar({ setSearchbarFilter, setLevel }) {
                                 </ul>
                               </div>
                             )}
-                          {/* <button onClick={handleSignOut} className='cta btn-sign-out'>Sign Out</button> */}
                         </div>
-                      ) : (<Link to='/job-offers-app/signin' style={{textDecoration: 'none'}}><button className='cta btn-sign-in'>Sign In</button></Link>)
+                      ) : (
+                        <div className='sign-in-wrap'>
+                          <Link to='/job-offers-app/signin' style={{textDecoration: 'none'}}><button className='cta btn-sign-in'>Sign In</button></Link>
+                          {signInAlert && <div className="sign-in-alert">
+                            <span className="arrow"></span>
+                            <p>Please sign in to save offers</p>
+                          </div>}
+                        </div>
+                      )
                     }
                 </div>
                 {

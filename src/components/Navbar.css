@@ -63,7 +63,17 @@
     border-radius: 15px 5px 15px 5px;
 }
 
-.btn-sign-out {
+.sign-in-wrap {
+    position: relative;
+}
+
+.sign-in-alert {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+}
+
+/* .btn-sign-out {
     background: #1f264a;
     color: #f0e5c8;
     border-radius: 20px 8px 20px 8px;
@@ -75,7 +85,7 @@
     background: linear-gradient(73deg, rgba(237,229,216,1) 0%, rgba(240,229,200,1) 100%);
     color: #1f264a;
     border-radius: 15px 5px 15px 5px;
-}
+} */
 
 .user-container {
     position: relative;
