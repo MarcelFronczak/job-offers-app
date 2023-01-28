@@ -7,7 +7,7 @@ import { faFacebookF, faLinkedinIn, faGithub } from '@fortawesome/free-brands-sv
 import { Link } from 'react-router-dom'
 import { UserAuth } from '../context/AuthContext'
 
-function Navbar({ setSearchbarFilter, setLevel, signInAlert }) {
+function Navbar({ setSearchbarFilter, setLevel, signInAlert, setSignInAlert }) {
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState('');
   const { user, logOut } = UserAuth();
@@ -17,13 +17,17 @@ function Navbar({ setSearchbarFilter, setLevel, signInAlert }) {
     setOpen(!open);
   }
 
-  function handleChange(e) {
+  const handleChange = (e) => {
       setSearch(e.target.value);
       setSearchbarFilter(e.target.value);
   }
 
   const handleUserBtnClick = () => {
     setUserBtnOpen(!userBtnOpen);
+  }
+
+  const handleAlertClose = () => {
+    setSignInAlert(false);
   }
 
   const truncateName = (name) => {
@@ -87,11 +91,14 @@ function Navbar({ setSearchbarFilter, setLevel, signInAlert }) {
                         </div>
                       ) : (
                         <div className='sign-in-wrap'>
-                          <Link to='/job-offers-app/signin' style={{textDecoration: 'none'}}><button className='cta btn-sign-in'>Sign In</button></Link>
-                          {signInAlert && <div className="sign-in-alert">
-                            <span className="arrow"></span>
-                            <p>Please sign in to save offers</p>
-                          </div>}
+                          <Link onClick={() => setSignInAlert(false)} to='/job-offers-app/signin' style={{textDecoration: 'none'}}><button className='cta btn-sign-in'>Sign In</button></Link>
+                          {signInAlert && 
+                            <div className="sign-in-alert">
+                              <FontAwesomeIcon icon={faXmark} className='xmark-alert' onClick={handleAlertClose}/>
+                              <span className="arrow"></span>
+                              <p>Please sign in to save offers</p>
+                            </div>
+                          }
                         </div>
                       )
                     }

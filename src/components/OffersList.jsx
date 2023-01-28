@@ -5,7 +5,7 @@ import './OffersList.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretLeft, faCaretRight } from '@fortawesome/free-solid-svg-icons'
 
-function OffersList({ searchbarFilter, level, signInAlert, setSignInAlert }) {
+function OffersList({ searchbarFilter, level, setSignInAlert }) {
     const [offers, setOffers] = useState([]);
     const [loading, setLoading] = useState(true);
     const [page, setPage] = useState(1);
@@ -53,7 +53,7 @@ function OffersList({ searchbarFilter, level, signInAlert, setSignInAlert }) {
         ) : (
           <div>
             {offers.map((offer) => (
-              <Offer key={offer.id} offer={offer} signInAlert={ signInAlert } setSignInAlert={ setSignInAlert } />
+              <Offer key={offer.id} offer={offer} setSignInAlert={ setSignInAlert } />
             ))}
           </div>
         )

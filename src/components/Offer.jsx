@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
 import { UserAuth } from '../context/AuthContext'
 
-function Offer({ offer, signInAlert, setSignInAlert }) {
+function Offer({ offer, setSignInAlert }) {
   const [clicked, setClicked] = useState(false);
   const [hover, setHover] = useState(false);
   const [details, setDetails] = useState(false);
@@ -13,7 +13,7 @@ function Offer({ offer, signInAlert, setSignInAlert }) {
   const handleSaveClick = (e) => {
     e.stopPropagation()
 
-    // user == null ? setSignInAlert(false) : 
+    user == null ? setSignInAlert(true) : 
     setClicked(!clicked);
   }
 

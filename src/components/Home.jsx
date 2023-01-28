@@ -9,9 +9,9 @@ const Home = () => {
    
   return (
     <div>
-      <Navbar setSearchbarFilter={ setSearchbarFilter } setLevel={ setLevel } signInAlert={ signInAlert }/>
+      <Navbar setSearchbarFilter={ setSearchbarFilter } setLevel={ setLevel } signInAlert={ signInAlert } setSignInAlert={ setSignInAlert }/>
       <main>
-        <OffersList searchbarFilter={ searchbarFilter } level={ level } setSignInAlert={ setSignInAlert } signInAlert={ signInAlert}/>
+        <OffersList searchbarFilter={ searchbarFilter } level={ level } setSignInAlert={ setSignInAlert } />
       </main>
     </div>
   )

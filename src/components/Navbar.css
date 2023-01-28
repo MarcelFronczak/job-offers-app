@@ -69,23 +69,50 @@
 
 .sign-in-alert {
     position: absolute;
-    width: fit-content;
-    height: fit-content;
+    width: 250px !important;
+    height: 70px;
+    background-color: var(--color-primary-light);
+    border: 1px solid white;
+    border-radius: 8px;
+    right: 0;
+    top: 42px;
+    padding: 20px;
+
+    -webkit-box-shadow: 2px 2px 25px 5px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 2px 4px 25px 5px rgba(0, 0, 0, 0.15);
+    -ms-box-shadow: 2px 4px 25px 5px rgba(0, 0, 0, 0.15);
+    -o-box-shadow: 2px 4px 25px 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 2px 4px 25px 5px rgba(0, 0, 0, 0.15);
 }
 
-/* .btn-sign-out {
-    background: #1f264a;
-    color: #f0e5c8;
-    border-radius: 20px 8px 20px 8px;
-    border: 1px solid #f0e5c8;
-    transition: all 0.19s;
+.sign-in-alert p {
+    margin-top: 8px;
 }
 
-.btn-sign-out:hover {
-    background: linear-gradient(73deg, rgba(237,229,216,1) 0%, rgba(240,229,200,1) 100%);
-    color: #1f264a;
-    border-radius: 15px 5px 15px 5px;
-} */
+.xmark-alert {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+    color: #B3B8C1;
+    font-size: 16px;
+    border: 1px solid white;
+}
+
+.xmark-alert:hover {
+    color: var(--color-accent-red);
+}
+
+.arrow {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: var(--color-primary-light);
+    z-index: 1;
+    top: -3px;
+    right: 32px;
+    transform: rotate(45deg);
+}
 
 .user-container {
     position: relative;
@@ -295,5 +322,11 @@
 
     .bars, .xmark {
         display: block;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .sign-in-alert {
+        top: 37px;
     }
 }
