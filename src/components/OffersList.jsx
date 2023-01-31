@@ -11,12 +11,19 @@ function OffersList({ searchbarFilter, level, setSignInAlert }) {
     const [page, setPage] = useState(1);
 
     useEffect(() => {
+      // when filters are submited or deleted, we come back to page #1
+      setPage(1);
+    }, [searchbarFilter, level])
+
+    useEffect(() => {
       setLoading(true)
         axios.get(`https://www.themuse.com/api/public/jobs?${level}page=${page}`)
             .then(res => {
                 const data = res.data.results.filter((offer) => {
                 if (offer.name.toLowerCase().includes(searchbarFilter.toLowerCase())) {
                   return offer;
+                } else {
+                  return null;
                 }
               });
               setLoading(false)
