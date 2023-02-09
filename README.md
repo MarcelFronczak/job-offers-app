@@ -12,5 +12,5 @@ Functions:
 - Responsive design
 
 Functions to be added:
-- Firebase Realtime Databse to store saved offers
+- Firebase Realtime Database to store saved offers
 - Category filter
