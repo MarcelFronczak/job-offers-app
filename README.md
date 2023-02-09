@@ -14,3 +14,5 @@ Functions:
 Functions to be added:
 - Firebase Realtime Database to store saved offers
 - Category filter
+
+![project-1-dark](https://user-images.githubusercontent.com/107025566/217748886-0694b3ed-85fb-49fe-bc93-10659d2d43bb.png)
