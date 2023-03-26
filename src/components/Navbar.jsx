@@ -96,7 +96,7 @@ function Navbar({ setSearchbarFilter, setLevel, signInAlert, setSignInAlert }) {
                             <div className="sign-in-alert">
                               <FontAwesomeIcon icon={faXmark} className='xmark-alert' onClick={handleAlertClose}/>
                               <span className="arrow"></span>
-                              <p>Please sign in to save offers</p>
+                              <p>Sign in to save this offer</p>
                             </div>
                           }
                         </div>
