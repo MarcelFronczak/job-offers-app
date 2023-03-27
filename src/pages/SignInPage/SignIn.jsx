@@ -52,6 +52,21 @@ function SignIn() {
       <div className={loaded ? 'signin-form active' : 'signin-form'}>
         <Link to='/job-offers-app' style={xMarkStyle}><FontAwesomeIcon icon={faXmark} className='x'/></Link>
         <h1>Sign In</h1>
+        <form className='user_form'>
+          <div className="email_container">
+            <label htmlFor="email">Email address</label>
+            <input type="email" id='email' placeholder='Email address' />
+          </div>
+          <div className="password_container">
+            <label htmlFor="password">Password</label>
+            <input type="password" id='password' placeholder='Password' />
+          </div>
+        </form>
+        <div className="separator">
+          <span className="line"></span>
+          or
+          <span className="line"></span>
+        </div>
         <GoogleButton className='google-btn' onClick={handleGoogleSignIn}/>
       </div>
     </div>
