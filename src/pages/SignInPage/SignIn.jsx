@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { Link, useNavigate } from 'react-router-dom'
 import { GoogleButton } from 'react-google-button'
-import { UserAuth } from '../context/AuthContext'
+import { UserAuth } from '../../context/AuthContext';
 
 function SignIn() {
   const [loaded, setLoaded] = useState(false);

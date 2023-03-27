@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
-import './Navbar.css'
-import FiltersForm from './FiltersForm'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser, faBars, faXmark, faCircleUser, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
-import { faFacebookF, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
-import { Link } from 'react-router-dom'
-import { UserAuth } from '../context/AuthContext'
+import React, { useState } from 'react';
+import './Navbar.css';
+import FiltersForm from '../FiltersForm/FiltersForm';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser, faBars, faXmark, faCircleUser, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { faFacebookF, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'react-router-dom';
+import { UserAuth } from '../../../../context/AuthContext';
 
 function Navbar({ setSearchbarFilter, setLevel, signInAlert, setSignInAlert }) {
   const [open, setOpen] = useState(false);

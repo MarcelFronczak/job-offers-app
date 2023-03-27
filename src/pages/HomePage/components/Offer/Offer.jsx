@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import './Offer.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHeart } from '@fortawesome/free-solid-svg-icons'
-import { UserAuth } from '../context/AuthContext'
+import React, { useState } from 'react';
+import './Offer.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { UserAuth } from '../../../../context/AuthContext';
 
 function Offer({ offer, setSignInAlert }) {
   const [clicked, setClicked] = useState(false);

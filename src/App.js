@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import { Route, Routes} from 'react-router-dom'
-import Home from './components/Home'
-import SignIn from './components/SignIn'
+import { Route, Routes} from 'react-router-dom';
+import Home from './pages/HomePage/components/Home/Home';
+import SignIn from './pages/SignInPage/SignIn'
 import { AuthContextProvider } from './context/AuthContext';
 
 const App = () => {

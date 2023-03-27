@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
-import Offer from './Offer'
-import './OffersList.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCaretLeft, faCaretRight } from '@fortawesome/free-solid-svg-icons'
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import Offer from '../Offer/Offer';
+import './OffersList.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretLeft, faCaretRight } from '@fortawesome/free-solid-svg-icons';
 
 function OffersList({ searchbarFilter, level, setSignInAlert }) {
     const [offers, setOffers] = useState([]);

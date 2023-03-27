@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Navbar from "./Navbar";
-import OffersList from './OffersList';
+import Navbar from "../Navbar/Navbar";
+import OffersList from '../OffersList/OffersList';
 
 const Home = () => {
   const [searchbarFilter, setSearchbarFilter] = useState('');
