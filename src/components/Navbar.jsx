@@ -55,11 +55,9 @@ function Navbar({ setSearchbarFilter, setLevel, signInAlert, setSignInAlert }) {
     <>
       <nav className='navbar'>
           <div className='navbar-items'>
-              <Link to="/job-offers-app" style={{ textDecoration: 'none' }}>
-              <a className='logo' href='#'>
+              <Link className='logo' to="/job-offers-app" style={{ textDecoration: 'none' }}>
                   <FontAwesomeIcon icon={faUser} className='logo-icon'/>
                   <h1 className='logo-text'>Job<span className='logo-span'>Finder</span></h1>
-              </a>
               </Link>
               <div className='nav-btns'>
                 <div className='buttons'>
