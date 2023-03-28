@@ -1,7 +1,8 @@
 .signin-page {
-    height: 100%;
+    height: 100vh;
+    width: 100%;
     text-align: center;
-    padding: 2rem 8vw;
+    padding: 1rem 8vw 0;
     overflow: hidden;
     background-color: #F7F9F4;
 }
@@ -10,27 +11,27 @@
     border-radius: 32px;
     padding: 2rem 1.5rem;
     max-width: 525px;
-    height: 300px;
+    height: auto;
     display: flex;
     flex-direction: column;
-    margin: 20vh auto 0;
+    margin: 8rem auto 0;
     text-align: center;
     position: relative;
     transform: translateX(-70px);
     opacity: 0;
 
-    box-shadow: 1px 1px 25px 4px rgba(57, 61, 80, 0.12);
+    box-shadow: 1px 1px 25px 4px rgba(57, 61, 80, 0.07);
 }
 
 .signin-form.active {
     border-radius: 32px;
-    padding: 2rem 1.5rem 3rem;
+    padding: 2rem 1.5rem;
     max-width: 525px;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 20vh auto 0;
+    margin: 8rem auto 0;
     text-align: center;
     position: relative;
     opacity: 1;
@@ -67,7 +68,7 @@
 }
 
 .user_form {
-    margin: 3rem auto 2rem;
+    margin: 3rem auto 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -103,8 +104,9 @@
     justify-content: center;
     align-items: center;
     align-self: center;
-    margin-bottom: 1.5rem;
-    gap: 14px;
+    margin-bottom: 2rem;
+    margin-top: 2.5rem;
+    gap: 26px;
     color: #bfbfbf;
 }
 
@@ -115,9 +117,18 @@
 }
 
 .google-btn {
-    margin: auto auto;
+    margin: 0 auto 2rem;
     opacity: 0.95;
     width: 80%;
+}
+
+.redirect_link {
+    color: var(--color-details-blue);
+}
+
+.redirect_link:hover, 
+.redirect_link:active {
+    color: var(--color-accent-red);
 }
 
 @media screen and (max-width: 580px) {

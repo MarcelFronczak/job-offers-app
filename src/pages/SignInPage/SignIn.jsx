@@ -68,6 +68,7 @@ function SignIn() {
           <span className="line"></span>
         </div>
         <GoogleButton className='google-btn' onClick={handleGoogleSignIn}/>
+        <p>You don't have account yet? <Link to='/job-offers-app' className='redirect_link' >Sign up</Link></p>
       </div>
     </div>
   )
