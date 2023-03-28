@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/job-offers-app/static/css/main.99c45deb.css",
-    "main.js": "/job-offers-app/static/js/main.d0daf6e5.js",
+    "main.css": "/job-offers-app/static/css/main.bf35159d.css",
+    "main.js": "/job-offers-app/static/js/main.1187a418.js",
     "index.html": "/job-offers-app/index.html",
-    "main.99c45deb.css.map": "/job-offers-app/static/css/main.99c45deb.css.map",
-    "main.d0daf6e5.js.map": "/job-offers-app/static/js/main.d0daf6e5.js.map"
+    "main.bf35159d.css.map": "/job-offers-app/static/css/main.bf35159d.css.map",
+    "main.1187a418.js.map": "/job-offers-app/static/js/main.1187a418.js.map"
   },
   "entrypoints": [
-    "static/css/main.99c45deb.css",
-    "static/js/main.d0daf6e5.js"
+    "static/css/main.bf35159d.css",
+    "static/js/main.1187a418.js"
   ]
 }
