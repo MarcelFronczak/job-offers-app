@@ -2,7 +2,7 @@
     height: 100vh;
     width: 100%;
     text-align: center;
-    padding: 1rem 8vw 1rem;
+    padding: 1rem 6vw 1rem;
     overflow: hidden;
     background-color: #F7F9F4;
 }
@@ -73,7 +73,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 1.5rem;
-    width: 80%;
+    width: 85%;
 }
 
 .email_container,
@@ -115,7 +115,7 @@
 
 .separator {
     display: flex;
-    width: 80%;
+    width: 85%;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -134,7 +134,7 @@
 
 .google_button {
     all: unset;
-    width: 80%;
+    width: 85%;
     padding: 10px 0;
     margin: 0 auto 2rem;
     color: var(--color-details-blue);
