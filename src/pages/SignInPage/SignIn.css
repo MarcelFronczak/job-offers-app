@@ -2,19 +2,19 @@
     height: 100vh;
     width: 100%;
     text-align: center;
-    padding: 1rem 8vw 0;
+    padding: 1rem 8vw 1rem;
     overflow: hidden;
     background-color: #F7F9F4;
 }
 
 .signin-form {
     border-radius: 32px;
-    padding: 2rem 1.5rem;
-    max-width: 525px;
+    padding: 2rem .5rem;
+    max-width: 475px;
     height: auto;
     display: flex;
     flex-direction: column;
-    margin: 8rem auto 0;
+    margin: 6rem auto 0;
     text-align: center;
     position: relative;
     transform: translateX(-70px);
@@ -25,13 +25,13 @@
 
 .signin-form.active {
     border-radius: 32px;
-    padding: 2rem 1.5rem;
-    max-width: 525px;
+    padding: 2rem .5rem;
+    max-width: 475px;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 8rem auto 0;
+    margin: 6rem auto 0;
     text-align: center;
     position: relative;
     opacity: 1;
@@ -97,6 +97,22 @@
     border: 1px solid var(--color-details-blue);
 }
 
+.sign_in_button {
+    all: unset;
+    width: 100%;
+    padding: 12px 0;
+    margin-top: .65rem;
+    color: #F7F9F4;
+    background-color: var(--color-details-blue);
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.sign_in_button:hover,
+.sign_in_button:focus {
+    background-color: #4b578e;
+}
+
 .separator {
     display: flex;
     width: 80%;
@@ -104,8 +120,8 @@
     justify-content: center;
     align-items: center;
     align-self: center;
-    margin-bottom: 2rem;
-    margin-top: 2.5rem;
+    margin-bottom: 1.75rem;
+    margin-top: 1.75rem;
     gap: 26px;
     color: #bfbfbf;
 }
@@ -116,14 +132,44 @@
     background-color: #bfbfbf;
 }
 
-.google-btn {
-    margin: 0 auto 2rem;
-    opacity: 0.95;
+.google_button {
+    all: unset;
     width: 80%;
+    padding: 10px 0;
+    margin: 0 auto 2rem;
+    color: var(--color-details-blue);
+    border: 1px solid var(--color-details-blue);
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.google_button_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+}
+
+.google_button_content p {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.google_button:hover,
+.google_button:focus {
+    border-color: var(--color-primary-dark);
+    color: var(--color-primary-dark);
+}
+
+.redirect_text {
+    padding-inline: 45px;
+    color: var(--color-primary-dark);
 }
 
 .redirect_link {
     color: var(--color-details-blue);
+    white-space: nowrap;
 }
 
 .redirect_link:hover, 

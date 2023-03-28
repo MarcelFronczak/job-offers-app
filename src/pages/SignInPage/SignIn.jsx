@@ -1,10 +1,10 @@
-import React from 'react'
-import { useState, useEffect } from 'react'
-import './SignIn.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser, faXmark } from '@fortawesome/free-solid-svg-icons'
-import { Link, useNavigate } from 'react-router-dom'
-import { GoogleButton } from 'react-google-button'
+import React from 'react';
+import { useState, useEffect } from 'react';
+import './SignIn.css';
+import GoogleIcon from '../../assets/icon-google.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { Link, useNavigate } from 'react-router-dom';
 import { UserAuth } from '../../context/AuthContext';
 
 function SignIn() {
@@ -61,14 +61,20 @@ function SignIn() {
             <label htmlFor="password">Password</label>
             <input type="password" id='password' placeholder='Password' />
           </div>
+          <button className='sign_in_button'>Sign in</button>
         </form>
         <div className="separator">
           <span className="line"></span>
           or
           <span className="line"></span>
         </div>
-        <GoogleButton className='google-btn' onClick={handleGoogleSignIn}/>
-        <p>You don't have account yet? <Link to='/job-offers-app' className='redirect_link' >Sign up</Link></p>
+        <button className='google_button' onClick={handleGoogleSignIn}>
+          <div className='google_button_content'>
+            <img src={GoogleIcon} alt="" />
+            <p>Sign in with Google</p>
+          </div>
+        </button>
+        <p className='redirect_text'>You don't have account yet? <Link to='/job-offers-app/signup' className='redirect_link' >Sign up</Link></p>
       </div>
     </div>
   )
