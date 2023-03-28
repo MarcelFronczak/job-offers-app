@@ -2,7 +2,7 @@
     height: 100vh;
     width: 100%;
     text-align: center;
-    padding: 1rem 6vw 1rem;
+    padding: 1rem 5vw 1rem;
     overflow: hidden;
     background-color: #F7F9F4;
 }
@@ -10,7 +10,7 @@
 .signin-form {
     border-radius: 32px;
     padding: 2rem .5rem;
-    max-width: 475px;
+    max-width: 455px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -73,7 +73,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 1.5rem;
-    width: 85%;
+    width: 90%;
 }
 
 .email_container,
@@ -115,7 +115,7 @@
 
 .separator {
     display: flex;
-    width: 85%;
+    width: 90%;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -134,7 +134,7 @@
 
 .google_button {
     all: unset;
-    width: 85%;
+    width: 90%;
     padding: 10px 0;
     margin: 0 auto 2rem;
     color: var(--color-details-blue);
