@@ -87,8 +87,8 @@ function SignUp() {
         <h1>Sign Up</h1>
         <form onSubmit={handleSubmit} className='user_form'>
           <div className="name_container">
-            <label htmlFor="name">Your name</label>
-            <input type="text" id='name' placeholder='Your name' onChange={handleNameChange} />
+            <label htmlFor="name">Full name</label>
+            <input type="text" id='name' placeholder='Full name' onChange={handleNameChange} />
           </div>
           <div className="email_container">
             <label htmlFor="email">Email address</label>
