@@ -1,21 +1,70 @@
 import React, { useContext, createContext, useState, useEffect } from 'react';
 import {
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
     GoogleAuthProvider,
     signInWithRedirect,
     signOut,
     onAuthStateChanged,
-    signInWithPopup
+    signInWithPopup,
+    updateProfile
 } from "firebase/auth";
-import { auth } from '../firebase.js'
+import {
+    query,
+    getDocs,
+    collection,
+    where,
+    addDoc,
+} from "firebase/firestore";
+import { auth, db } from '../firebase.js'
 
 const AuthContext = createContext()
 
 export const AuthContextProvider = ({ children }) => {
     const [user, setUser] = useState({});
 
-    const googleSignIn = () => {
-        const provider = new GoogleAuthProvider();
-        signInWithPopup(auth, provider);
+    const createUser = async (name, email, password) => {
+        try {
+            const res = await createUserWithEmailAndPassword(auth, email, password);
+            const user = res.user;
+            await addDoc(collection(db, "users"), {
+              uid: user.uid,
+              name,
+              authProvider: "local",
+              email,
+            });
+            await updateProfile(auth.currentUser, { displayName: name }).catch(
+                (err) => console.log(err)
+              );
+          } catch (err) {
+            console.error(err);
+            alert(err.message);
+          }
+    };
+
+    const signIn = (email, password) => {
+        return signInWithEmailAndPassword(auth, email, password);
+    }
+
+    const googleProvider = new GoogleAuthProvider();
+    const googleSignIn = async () => {
+        try {
+            const res = await signInWithPopup(auth, googleProvider);
+            const user = res.user;
+            const q = query(collection(db, "users"), where("uid", "==", user.uid));
+            const docs = await getDocs(q);
+            if (docs.docs.length === 0) {
+              await addDoc(collection(db, "users"), {
+                uid: user.uid,
+                name: user.displayName,
+                authProvider: "google",
+                email: user.email,
+              });
+            }
+          } catch (err) {
+            console.error(err);
+            alert(err.message);
+          }
     }
 
     const logOut = () => {
@@ -33,7 +82,7 @@ export const AuthContextProvider = ({ children }) => {
     }, [])
 
     return (
-        <AuthContext.Provider value={{ googleSignIn, logOut, user}}>
+        <AuthContext.Provider value={{ createUser, signIn, googleSignIn, logOut, user}}>
             { children }
         </AuthContext.Provider>
     )

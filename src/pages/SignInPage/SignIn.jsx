@@ -8,27 +8,57 @@ import { Link, useNavigate } from 'react-router-dom';
 import { UserAuth } from '../../context/AuthContext';
 
 function SignIn() {
+  const [email, setEmail] = useState('');
+  const [emailError, setEmailError] = useState('');
+  const [password, setPassword] = useState('');
+  const [passwordError, setPasswordError] = useState('');
+  const [error, setError] = useState('');
   const [loaded, setLoaded] = useState(false);
-  const { googleSignIn, user } = UserAuth();
+  const { signIn, googleSignIn, user } = UserAuth();
   const navigate = useNavigate();
 
   useEffect(() => {
     setLoaded(true);
   }, [])
 
+  const handleEmailChange = (e) => {
+    const email = e.target.value;
+    setEmail(email);
+
+    // Email validation
+    if (!email.includes('@')) {
+      setEmailError('Please enter a valid email address');
+    } else {
+      setEmailError('');
+    }
+  };
+
+  const handlePasswordChange = (e) => {
+    const password = e.target.value;
+    setPassword(password);
+
+    // Password validation
+    if (password.length < 8) {
+      setPasswordError('Password must be at least 8 characters long');
+    } else {
+      setPasswordError('');
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    signIn(email, password);
+    navigate('/job-offers-app');
+  }
+
   const handleGoogleSignIn = async () => {
     try {
       await googleSignIn();
+      navigate('/job-offers-app');
     } catch (error) {
       console.log(error)
     }
   }
-
-  useEffect(() => {
-    if(user != null) {
-      navigate('/job-offers-app');
-    }
-  }, [user])
 
   const xMarkStyle = {
     textDecoration: 'none',
@@ -52,16 +82,16 @@ function SignIn() {
       <div className={loaded ? 'signin-form active' : 'signin-form'}>
         <Link to='/job-offers-app' style={xMarkStyle}><FontAwesomeIcon icon={faXmark} className='x'/></Link>
         <h1>Sign In</h1>
-        <form className='user_form'>
+        <form className='user_form' onSubmit={handleSubmit}>
           <div className="email_container">
             <label htmlFor="email">Email address</label>
-            <input type="email" id='email' placeholder='Email address' />
+            <input type="email" id='email' placeholder='Email address' onChange={handleEmailChange} />
           </div>
           <div className="password_container">
             <label htmlFor="password">Password</label>
-            <input type="password" id='password' placeholder='Password' />
+            <input type="password" id='password' placeholder='Password' onChange={handlePasswordChange} />
           </div>
-          <button className='sign_in_button'>Sign in</button>
+          <button type='submit' className='sign_in_button'>Sign in</button>
         </form>
         <div className="separator">
           <span className="line"></span>

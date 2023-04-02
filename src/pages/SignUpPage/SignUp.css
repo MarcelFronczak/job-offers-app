@@ -1,9 +1,8 @@
 .signin-page {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     text-align: center;
-    padding: 1rem 5vw 1rem;
-    overflow: hidden;
+    padding: 1rem 5vw 2rem;
     background-color: #F7F9F4;
 }
 
@@ -76,6 +75,7 @@
     width: 90%;
 }
 
+.name_container,
 .email_container,
 .password_container {
     display: flex;
@@ -84,6 +84,7 @@
     gap: 8px;
 }
 
+.name_container label,
 .email_container label,
 .password_container label {
     font-size: 14px;

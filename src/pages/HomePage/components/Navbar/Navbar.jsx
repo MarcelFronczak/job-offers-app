@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Navbar.css';
 import FiltersForm from '../FiltersForm/FiltersForm';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
