@@ -7,25 +7,21 @@ import { FiltersContext } from '../../../../context/FiltersContext';
 function FiltersForm({ open, setOpen}) {
     const [levelDivOpen, setLevelDivOpen] = useState(false);
     const [levelFilterArr, setLevelFilterArr] = useState([]);
-    const {level, setLevel} = useContext(FiltersContext);
+    const { setLevel} = useContext(FiltersContext);
     const ref = useRef([]);
 
     function handleLevelDivClick() {
         setLevelDivOpen(!levelDivOpen);
     }
     
+    // pushing level filter value to array
     function handleLevelChange(e) {
-        if (e.target.checked) {
-            setLevelFilterArr(arr => [...arr, e.target.name]);  
-            console.log(levelFilterArr);
-        } else {
-            setLevelFilterArr(arr => arr.filter(item => item !== e.target.name))
-        }
+        e.target.checked ? setLevelFilterArr(arr => [...arr, e.target.name]) : setLevelFilterArr(arr => arr.filter(item => item !== e.target.name));
     }
 
+    // joining all level filters values into 1 value and passing it to level state
     function handleSaveClick(e) {
         e.preventDefault();
-
         setLevel(levelFilterArr.join(''));
         setLevelDivOpen(!levelDivOpen);
         setOpen(!open);
