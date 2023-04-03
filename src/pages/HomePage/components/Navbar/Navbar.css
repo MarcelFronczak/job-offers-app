@@ -50,7 +50,7 @@
 }
 
 .btn-sign-in {
-    background: #1f264a;
+    background: transparent;
     color: var(--color-accent-red);
     border-radius: 20px 8px 20px 8px;
     border: 1px solid var(--color-accent-red);
@@ -58,8 +58,8 @@
 }
 
 .btn-sign-in:hover {
-    background: linear-gradient(75deg, rgba(245,100,87,1) 0%, rgb(248, 54, 36) 100%);
-    color: #1f264a;
+    background: linear-gradient(54deg, rgba(228,39,39,1) 0%, rgba(232,46,46,1) 100%);;
+    color: #303133;
     border-radius: 15px 5px 15px 5px;
 }
 

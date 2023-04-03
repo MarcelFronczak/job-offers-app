@@ -111,7 +111,7 @@
 
 .sign_in_button:hover,
 .sign_in_button:focus {
-    background-color: #4b578e;
+    background-color: #2c3041;
 }
 
 .separator {
@@ -159,8 +159,8 @@
 
 .google_button:hover,
 .google_button:focus {
-    border-color: var(--color-primary-dark);
-    color: var(--color-primary-dark);
+    border-color: black;
+    color: black;
 }
 
 .redirect_text {

@@ -1,7 +1,7 @@
 .offer-container {
     width: 100%;
     padding: 14px;
-    border-left: 1px solid #F56457;
+    border-left: 1px solid #e82a2a;
     box-shadow: 2px 2px 25px 1px rgba(0, 0, 0, 0.15);
     border-radius: 0 2px 2px 0;
     margin-bottom: 1.5rem;
@@ -12,7 +12,7 @@
 
 .offer-container:hover {
     transform: translateX(6px);
-    border-color: #fa5d4f;
+    border-color: #ec3a3a;
 }
 
 .columns {
