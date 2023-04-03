@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import Offer from '../Offer/Offer';
 import './OffersList.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretLeft, faCaretRight } from '@fortawesome/free-solid-svg-icons';
+import { FiltersContext } from '../../../../context/FiltersContext';
 
-function OffersList({ searchbarFilter, level, setSignInAlert }) {
+function OffersList({ searchbarFilter, setSignInAlert }) {
     const [offers, setOffers] = useState([]);
     const [loading, setLoading] = useState(true);
     const [page, setPage] = useState(1);
+    const {level} = useContext(FiltersContext);
 
     useEffect(() => {
       // when filters are submited or deleted, we come back to page #1
@@ -33,7 +35,6 @@ function OffersList({ searchbarFilter, level, setSignInAlert }) {
               console.log(err)
               setLoading(false)
             })
-            console.log(level);
             
     }, [page, searchbarFilter, level])
 

@@ -4,14 +4,13 @@ import OffersList from '../OffersList/OffersList';
 
 const Home = () => {
   const [searchbarFilter, setSearchbarFilter] = useState('');
-  const [level, setLevel] = useState([]);
   const [signInAlert, setSignInAlert] = useState(false);
    
   return (
     <div>
-      <Navbar setSearchbarFilter={ setSearchbarFilter } setLevel={ setLevel } signInAlert={ signInAlert } setSignInAlert={ setSignInAlert }/>
+      <Navbar setSearchbarFilter={ setSearchbarFilter } signInAlert={ signInAlert } setSignInAlert={ setSignInAlert }/>
       <main>
-        <OffersList searchbarFilter={ searchbarFilter } level={ level } setSignInAlert={ setSignInAlert } />
+        <OffersList searchbarFilter={ searchbarFilter } setSignInAlert={ setSignInAlert } />
       </main>
     </div>
   )

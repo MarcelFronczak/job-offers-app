@@ -7,7 +7,7 @@ import { faFacebookF, faLinkedinIn, faGithub } from '@fortawesome/free-brands-sv
 import { Link } from 'react-router-dom';
 import { UserAuth } from '../../../../context/AuthContext';
 
-function Navbar({ setSearchbarFilter, setLevel, signInAlert, setSignInAlert }) {
+function Navbar({ setSearchbarFilter, signInAlert, setSignInAlert }) {
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState('');
   const { user, logOut } = UserAuth();
@@ -122,7 +122,7 @@ function Navbar({ setSearchbarFilter, setLevel, signInAlert, setSignInAlert }) {
                     spellCheck='false'>
                 </input>
               </div>
-            <FiltersForm setLevel={setLevel}/>
+            <FiltersForm />
           </div>
           <div className="icons-container">
             <a href="#" className='social-icon'><FontAwesomeIcon icon={faFacebookF} /></a>
@@ -145,7 +145,7 @@ function Navbar({ setSearchbarFilter, setLevel, signInAlert, setSignInAlert }) {
                   spellCheck='false'>
               </input>
             </div>
-            <FiltersForm setLevel={setLevel} open={open} setOpen={setOpen} />
+            <FiltersForm open={open} setOpen={setOpen} />
           </div>
           <div className="icons-container">
             <a href="#" className='social-icon'><FontAwesomeIcon icon={faFacebookF} /></a>

@@ -1,11 +1,13 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useContext } from 'react'
 import './FiltersForm.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
+import { FiltersContext } from '../../../../context/FiltersContext';
 
-function FiltersForm({ setLevel, open, setOpen}) {
+function FiltersForm({ open, setOpen}) {
     const [levelDivOpen, setLevelDivOpen] = useState(false);
     const [levelFilterArr, setLevelFilterArr] = useState([]);
+    const {level, setLevel} = useContext(FiltersContext);
     const ref = useRef([]);
 
     function handleLevelDivClick() {
@@ -15,6 +17,7 @@ function FiltersForm({ setLevel, open, setOpen}) {
     function handleLevelChange(e) {
         if (e.target.checked) {
             setLevelFilterArr(arr => [...arr, e.target.name]);  
+            console.log(levelFilterArr);
         } else {
             setLevelFilterArr(arr => arr.filter(item => item !== e.target.name))
         }
