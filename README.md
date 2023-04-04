@@ -2,7 +2,7 @@ JobFinder React App using TheMuse API - project in progress
 
 Tech stack: React, CSS, Firebase
 
-Libraries: Axios, React router, FontAwesome
+Libraries: Axios, React Router, FontAwesome
 
 Live page at: https://marcelfronczak.github.io/job-offers-app/
 
