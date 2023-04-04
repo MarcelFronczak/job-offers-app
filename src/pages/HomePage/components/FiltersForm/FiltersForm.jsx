@@ -9,16 +9,18 @@ function FiltersForm({ open, setOpen}) {
     const [categoryDivOpen, setCategoryDivOpen] = useState(false);
     const [levelFilterArr, setLevelFilterArr] = useState([]);
     const [categoryFilterArr, setCategoryFilterArr] = useState([]);
-    const { filters, setFilters } = useContext(FiltersContext);
+    const { setFilters } = useContext(FiltersContext);
     const refLevel = useRef([]);
     const refCategory = useRef([]);
 
     function handleLevelDivClick() {
         setLevelDivOpen(!levelDivOpen);
+        setCategoryDivOpen(false);
     }
 
     function handleCategoryDivClick() {
       setCategoryDivOpen(!categoryDivOpen);
+      setLevelDivOpen(false);
   }
     
     // pushing level filter value to array
@@ -26,18 +28,18 @@ function FiltersForm({ open, setOpen}) {
         e.target.checked ? setLevelFilterArr(arr => [...arr, e.target.name]) : setLevelFilterArr(arr => arr.filter(item => item !== e.target.name));
     }
 
+    // pushing category filter value to array
     function handleCategoryChange(e) {
       e.target.checked ? setCategoryFilterArr(arr => [...arr, e.target.name]) : setCategoryFilterArr(arr => arr.filter(item => item !== e.target.name));
     }
 
-    // joining all level filters values into 1 value and passing it to level state
+    // joining all level/category filters values into 1 value and passing it to level state
     function handleSaveClick(e) {
         e.preventDefault();
         setFilters({level: levelFilterArr.join(''), category: categoryFilterArr.join('')});
         setLevelDivOpen(false);
         setCategoryDivOpen(false);
         setOpen(!open);
-        console.log(filters)
     }
 
     function handleClearClick(e) {
