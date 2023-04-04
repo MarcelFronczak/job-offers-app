@@ -6,7 +6,7 @@ Functions:
 - API to provide job and company listings
 - Offers filtering through searchbar
 - Offers filtering by experience level
-- Firebase Authentication - sign in with google
+- Firebase Authentication - sign in with email and password or Google
 - Pagination (previous / next page buttons)
 - Offer description on click
 - Responsive design
