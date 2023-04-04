@@ -1,11 +1,11 @@
 import React, { createContext, useState } from 'react';
 
-export const FiltersContext = createContext('');
+export const FiltersContext = createContext();
 
 export const FiltersProvider = ({children}) => {
-    const [level, setLevel] = useState('')
+    const [filters, setFilters] = useState({name: '', level: ''})
 
-    return <FiltersContext.Provider value={{level, setLevel}}>
+    return <FiltersContext.Provider value={{filters, setFilters}}>
         {children}
     </FiltersContext.Provider>
 }

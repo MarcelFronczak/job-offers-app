@@ -221,7 +221,8 @@
     right: 0;
     bottom: 0;
     height: calc(100% - 60px);
-    padding: 2.5rem 2rem 2rem;
+    width: 239px;
+    padding: 2rem 1.5rem 2rem;
     background-color: var(--color-primary-light);
     box-shadow: -2px 0px 25px rgba(0, 0, 0, 0.15);
     z-index: 1;
@@ -313,7 +314,8 @@
         top: 52px;
         right: 0;
         height: calc(100% - 52px);
-        padding: 2.5rem 2rem 2rem;
+        width: 239px;
+        padding: 2rem 1.5rem 2rem;
         background-color: var(--color-primary-light);
         box-shadow: -2px 0px 25px rgba(0, 0, 0, 0.15);
         z-index: 1;

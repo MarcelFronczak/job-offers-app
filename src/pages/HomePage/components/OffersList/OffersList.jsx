@@ -10,16 +10,30 @@ function OffersList({ searchbarFilter, setSignInAlert }) {
     const [offers, setOffers] = useState([]);
     const [loading, setLoading] = useState(true);
     const [page, setPage] = useState(1);
-    const {level} = useContext(FiltersContext);
+    const {filters} = useContext(FiltersContext);
 
     useEffect(() => {
       // when filters are submited or deleted, we come back to page #1
       setPage(1);
-    }, [searchbarFilter, level])
+    }, [searchbarFilter, filters])
 
     useEffect(() => {
       setLoading(true)
-        axios.get(`https://www.themuse.com/api/public/jobs?${level}page=${page}`)
+      axios.get(`https://www.themuse.com/api/public/jobs?page=1`)
+          .then(res => {
+            setOffers(res.data.results);
+            setLoading(false);
+          }
+          )
+          .catch(err => {
+            console.log(err)
+            setLoading(false)
+          })
+    }, [])
+
+    useEffect(() => {
+      setLoading(true)
+        axios.get(`https://www.themuse.com/api/public/jobs?${filters.category}${filters.level}page=${page}`)
             .then(res => {
                 const data = res.data.results.filter((offer) => {
                 if (offer.name.toLowerCase().includes(searchbarFilter.toLowerCase())) {
@@ -28,15 +42,15 @@ function OffersList({ searchbarFilter, setSignInAlert }) {
                   return null;
                 }
               });
-              setLoading(false)
               setOffers(data)
+              setLoading(false)
             })
             .catch(err => {
               console.log(err)
               setLoading(false)
             })
             
-    }, [page, searchbarFilter, level])
+    }, [page, searchbarFilter, filters])
 
     const handlePreviousBtnClick = () => {
       if(page !== 1) {

@@ -6,6 +6,10 @@
     border: none;
 }
 
+.category-container {
+    margin-top: 1rem;
+}
+
 .level-toggle-div {
     position: relative;
     display: flex;
@@ -21,8 +25,9 @@
     border: none;
     border-radius: 2px;
     color: var(--color-primary-dark);
-    font-size: 12px;
+    font-size: 10px;
     cursor: pointer;
+
 }
 
 .level-toggle-div p {
@@ -56,9 +61,24 @@
 
 .list-visible {
     margin: 0 auto;
-    width: 85%;
+    width: 90%;
     display: flex;
     flex-direction: column;
+
+}
+
+.category-list {
+    height: 250px;
+    overflow-y: scroll;
+}
+
+.category-list::-webkit-scrollbar {
+    background: #dedede;
+    width: 5px;
+}
+
+.category-list::-webkit-scrollbar-thumb {
+    background-color: #c0c0c0;
 }
 
 .list-visible label {
@@ -73,7 +93,7 @@
     -ms-box-shadow: 2px 4px 25px 1px rgba(0, 0, 0, 0.075);
     -o-box-shadow: 2px 4px 25px 1px rgba(0, 0, 0, 0.075);
     box-shadow: 2px 4px 25px 1px rgba(0, 0, 0, 0.075);
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 400;
     color: var(--color-primary-dark);
     cursor: pointer;
@@ -112,4 +132,8 @@
 .clear-btn {
     color: #e82a2a;
     border: 1px solid #e82a2a;
+}
+
+input {
+    cursor: pointer;
 }
