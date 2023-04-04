@@ -5,6 +5,17 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+
+}
+
+body::-webkit-scrollbar {
+    background: #dedede;
+    width: 7px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #ea4e4e;
+    border-radius: 6px;
 }
 
 :root {
