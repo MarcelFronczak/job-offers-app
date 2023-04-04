@@ -70,19 +70,19 @@ function FiltersForm({ open, setOpen}) {
             </div>
             <div className={levelDivOpen ? 'list-visible' : 'list-not-visible'}>
                 <label onChange={handleLevelChange}>
-                  Internship
+                  <span>Internship</span>
                   <input type="checkbox" name='level=Internship&' ref={(element) => { refLevel.current[0] = element }}/>
                 </label>
                 <label onChange={handleLevelChange}>
-                  Entry
+                  <span>Entry</span>
                   <input type="checkbox" name='level=Entry%20Level&' ref={(element) => { refLevel.current[1] = element }}/>
                 </label>
                 <label onChange={handleLevelChange}>
-                  Mid
+                  <span>Mid</span>
                   <input type="checkbox" name='level=Mid%20Level&' ref={(element) => { refLevel.current[2] = element }}/>
                 </label>
                 <label onChange={handleLevelChange}>
-                  Senior
+                  <span>Senior</span>
                   <input type="checkbox" name='level=Senior%20Level&' ref={(element) => { refLevel.current[3] = element }}/>
                 </label>
               </div>
@@ -96,123 +96,123 @@ function FiltersForm({ open, setOpen}) {
             </div>
             <div className={categoryDivOpen ? 'list-visible category-list' : 'list-not-visible'}>
                 <label onChange={handleCategoryChange}>
-                  Accounting
+                  <span>Accounting</span>
                   <input type="checkbox" name='category=Accounting&' ref={(element) => { refCategory.current[0] = element }}/>
                 </label>
                 <label onChange={handleCategoryChange}>
-                  Accounting and Finance
+                  <span>Accounting and Finance</span>
                   <input type="checkbox" name='category=Accounting%20and%20Finance&' ref={(element) => { refCategory.current[1] = element }}/>
                 </label>
                 <label onChange={handleCategoryChange}>
-                  Administration and Office
+                  <span>Administration and Office</span>
                   <input type="checkbox" name='category=Administration%20and%20Office&' ref={(element) => { refCategory.current[2] = element }}/>
                 </label>
                 <label onChange={handleCategoryChange}>
-                  Advertising and Marketing
+                  <span>Advertising and Marketing</span>
                   <input type="checkbox" name='category=Advertising%20and%20Marketing&category=Marketing&' ref={(element) => { refCategory.current[3] = element }}/>
                 </label>
                 <label onChange={handleCategoryChange}>
-                  Animal Care
+                  <span>Animal Care</span>
                   <input type="checkbox" name='category=Animal%20Care&' ref={(element) => { refCategory.current[4] = element }}/>
                 </label>
                 <label onChange={handleCategoryChange}>
-                  Business Operations
+                  <span>Business Operations</span>
                   <input type="checkbox" name='category=Business%20Operations&' ref={(element) => { refCategory.current[5] = element }}/>
                 </label>
                 <label onChange={handleCategoryChange}>
-                  Computer and IT
+                  <span>Computer and IT</span>
                   <input type="checkbox" name='category=Computer%20and%20IT&' ref={(element) => { refCategory.current[6] = element }}/>
                 </label>
                 <label onChange={handleCategoryChange}>
-                  Construction
+                  <span>Construction</span>
                   <input type="checkbox" name='category=Construction&' ref={(element) => { refCategory.current[7] = element }}/>
                 </label>
                 <label onChange={handleCategoryChange}>
-                  Data and Analytics
+                  <span>Data and Analytics</span>
                   <input type="checkbox" name='category=Data%20and%20Analytics&' ref={(element) => { refCategory.current[8] = element }}/>
                 </label>
                 <label onChange={handleCategoryChange}>
-                  Data Science
+                  <span>Data Science</span>
                   <input type="checkbox" name='category=Data%20Science&' ref={(element) => { refCategory.current[9] = element }}/>
                 </label>
                 <label onChange={handleCategoryChange}>
-                  Design and UX
+                  <span>Design and UX</span>
                   <input type="checkbox" name='category=Design%20and%20UX&category=Design&' ref={(element) => { refCategory.current[10] = element }}/>
                 </label>
                 <label onChange={handleCategoryChange}>
-                  Editor
+                  <span>Editor</span>
                   <input type="checkbox" name='category=Editor&' ref={(element) => { refCategory.current[11] = element }}/>
                 </label>
                 <label onChange={handleCategoryChange}>
-                  Education
+                  <span>Education</span>
                   <input type="checkbox" name='category=Education&' ref={(element) => { refCategory.current[12] = element }}/>
                 </label>
                 <label onChange={handleCategoryChange}>
-                  Healthcare
+                  <span>Healthcare</span>
                   <input type="checkbox" name='category=Healthcare&' ref={(element) => { refCategory.current[13] = element }}/>
                 </label>
                 <label onChange={handleCategoryChange}>
-                  HR
+                  <span>HR</span>
                   <input type="checkbox" name='category=HR&category=Human%20Resources%20and%20Recruitment&' ref={(element) => { refCategory.current[14] = element }}/>
                 </label>
                 <label onChange={handleCategoryChange}>
-                  Law
+                  <span>Law</span>
                   <input type="checkbox" name='category=Law&' ref={(element) => { refCategory.current[15] = element }}/>
                 </label>
                 <label onChange={handleCategoryChange}>
-                  Manufacturing and Warehouse
+                  <span>Manufacturing and Warehouse</span>
                   <input type="checkbox" name='category=Manufacturing%20and%20Warehouse&' ref={(element) => { refCategory.current[16] = element }}/>
                 </label>
                 <label onChange={handleCategoryChange}>
-                  Media, PR, and Communications
+                  <span>Media, PR, and Communications</span>
                   <input type="checkbox" name='category=Media,%20PR,%20and%20Communications&' ref={(element) => { refCategory.current[17] = element }}/>
                 </label>
                 <label onChange={handleCategoryChange}>
-                  Mental Health
+                  <span>Mental Health</span>
                   <input type="checkbox" name='category=Mental%20Health&' ref={(element) => { refCategory.current[17] = element }}/>
                 </label>
                 <label onChange={handleCategoryChange}>
-                  Product Management
+                  <span>Product Management</span>
                   <input type="checkbox" name='category=Product%20Management&' ref={(element) => { refCategory.current[18] = element }}/>
                 </label>
                 <label onChange={handleCategoryChange}>
-                  Project Management
+                  <span>Project Management</span>
                   <input type="checkbox" name='category=Project%20Management&' ref={(element) => { refCategory.current[19] = element }}/>
                 </label>
                 <label onChange={handleCategoryChange}>
-                  Real Estate
+                  <span>Real Estate</span>
                   <input type="checkbox" name='category=Real%20Estate&' ref={(element) => { refCategory.current[20] = element }}/>
                 </label>
                 <label onChange={handleCategoryChange}>
-                  Retail
+                  <span>Retail</span>
                   <input type="checkbox" name='category=Retail&' ref={(element) => { refCategory.current[21] = element }}/>
                 </label>
                 <label onChange={handleCategoryChange}>
-                  Sales
+                  <span>Sales</span>
                   <input type="checkbox" name='category=Sales&' ref={(element) => { refCategory.current[22] = element }}/>
                 </label>
                 <label onChange={handleCategoryChange}>
-                  Science and Engineering
+                  <span>Science and Engineering</span>
                   <input type="checkbox" name='category=Science%20and%20Engineering&' ref={(element) => { refCategory.current[23] = element }}/>
                 </label>
                 <label onChange={handleCategoryChange}>
-                  Software Engineer
+                  <span>Software Engineer</span>
                   <input type="checkbox" name='category=Software%20Engineer&category=Software%20Engineering&' ref={(element) => { refCategory.current[24] = element }}/>
                 </label>
                 <label onChange={handleCategoryChange}>
-                  Sports, Fitness, and Recreation
+                  <span>Sports, Fitness, and Recreation</span>
                   <input type="checkbox" name='category=Sports,%20Fitness,%20and%20Recreation&' ref={(element) => { refCategory.current[25] = element }}/>
                 </label>
                 <label onChange={handleCategoryChange}>
-                  Transportation and Logistics
+                  <span>Transportation and Logistics</span>
                   <input type="checkbox" name='category=Transportation%20and%20Logistics&' ref={(element) => { refCategory.current[26] = element }}/>
                 </label>
                 <label onChange={handleCategoryChange}>
-                  Videography
+                  <span>Videography</span>
                   <input type="checkbox" name='category=Videography&' ref={(element) => { refCategory.current[27] = element }}/>
                 </label>
                 <label onChange={handleCategoryChange}>
-                  Writing and Editing
+                  <span>Writing and Editing</span>
                   <input type="checkbox" name='category=Writer&category=Writing%20and%20Editing&' ref={(element) => { refCategory.current[28] = element }}/>
                 </label>
               </div>

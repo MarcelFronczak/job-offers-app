@@ -27,6 +27,15 @@
     color: var(--color-primary-dark);
     font-size: 10px;
     cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.level-toggle-div:hover {
+    background: #f0f2ed;
+}
+
+.level-toggle-div:hover {
+    color: #2d2e2f;
 }
 
 .level-toggle-div p {
@@ -101,10 +110,19 @@
     font-weight: 400;
     color: var(--color-primary-dark);
     cursor: pointer;
+    transition: all 0.15s ease;
 }
 
 .list-visible label:hover {
     background-color: #eff1eb;
+}
+
+.list-visible label span {
+    transition: all 0.2s ease;
+}
+
+.list-visible label:hover span {
+    transform: translateX(3px);
 }
 
 .form-buttons {
@@ -136,6 +154,14 @@
 .clear-btn {
     color: #e82a2a;
     border: 1px solid #e82a2a;
+}
+
+.form-buttons button:hover {
+    border-width: 2px;
+}
+
+.form-buttons button:hover {
+    font-weight: 600;
 }
 
 input {
