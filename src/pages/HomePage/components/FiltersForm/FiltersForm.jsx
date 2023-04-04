@@ -107,7 +107,7 @@ function FiltersForm({ open, setOpen}) {
                 </label>
                 <label onChange={handleCategoryChange}>
                   Advertising and Marketing
-                  <input type="checkbox" name='category=Advertising%20and%20Marketing&' ref={(element) => { refCategory.current[3] = element }}/>
+                  <input type="checkbox" name='category=Advertising%20and%20Marketing&category=Marketing&' ref={(element) => { refCategory.current[3] = element }}/>
                 </label>
                 <label onChange={handleCategoryChange}>
                   Animal Care
@@ -124,6 +124,94 @@ function FiltersForm({ open, setOpen}) {
                 <label onChange={handleCategoryChange}>
                   Construction
                   <input type="checkbox" name='category=Construction&' ref={(element) => { refCategory.current[7] = element }}/>
+                </label>
+                <label onChange={handleCategoryChange}>
+                  Data and Analytics
+                  <input type="checkbox" name='category=Data%20and%20Analytics&' ref={(element) => { refCategory.current[8] = element }}/>
+                </label>
+                <label onChange={handleCategoryChange}>
+                  Data Science
+                  <input type="checkbox" name='category=Data%20Science&' ref={(element) => { refCategory.current[9] = element }}/>
+                </label>
+                <label onChange={handleCategoryChange}>
+                  Design and UX
+                  <input type="checkbox" name='category=Design%20and%20UX&category=Design&' ref={(element) => { refCategory.current[10] = element }}/>
+                </label>
+                <label onChange={handleCategoryChange}>
+                  Editor
+                  <input type="checkbox" name='category=Editor&' ref={(element) => { refCategory.current[11] = element }}/>
+                </label>
+                <label onChange={handleCategoryChange}>
+                  Education
+                  <input type="checkbox" name='category=Education&' ref={(element) => { refCategory.current[12] = element }}/>
+                </label>
+                <label onChange={handleCategoryChange}>
+                  Healthcare
+                  <input type="checkbox" name='category=Healthcare&' ref={(element) => { refCategory.current[13] = element }}/>
+                </label>
+                <label onChange={handleCategoryChange}>
+                  HR
+                  <input type="checkbox" name='category=HR&category=Human%20Resources%20and%20Recruitment&' ref={(element) => { refCategory.current[14] = element }}/>
+                </label>
+                <label onChange={handleCategoryChange}>
+                  Law
+                  <input type="checkbox" name='category=Law&' ref={(element) => { refCategory.current[15] = element }}/>
+                </label>
+                <label onChange={handleCategoryChange}>
+                  Manufacturing and Warehouse
+                  <input type="checkbox" name='category=Manufacturing%20and%20Warehouse&' ref={(element) => { refCategory.current[16] = element }}/>
+                </label>
+                <label onChange={handleCategoryChange}>
+                  Media, PR, and Communications
+                  <input type="checkbox" name='category=Media,%20PR,%20and%20Communications&' ref={(element) => { refCategory.current[17] = element }}/>
+                </label>
+                <label onChange={handleCategoryChange}>
+                  Mental Health
+                  <input type="checkbox" name='category=Mental%20Health&' ref={(element) => { refCategory.current[17] = element }}/>
+                </label>
+                <label onChange={handleCategoryChange}>
+                  Product Management
+                  <input type="checkbox" name='category=Product%20Management&' ref={(element) => { refCategory.current[18] = element }}/>
+                </label>
+                <label onChange={handleCategoryChange}>
+                  Project Management
+                  <input type="checkbox" name='category=Project%20Management&' ref={(element) => { refCategory.current[19] = element }}/>
+                </label>
+                <label onChange={handleCategoryChange}>
+                  Real Estate
+                  <input type="checkbox" name='category=Real%20Estate&' ref={(element) => { refCategory.current[20] = element }}/>
+                </label>
+                <label onChange={handleCategoryChange}>
+                  Retail
+                  <input type="checkbox" name='category=Retail&' ref={(element) => { refCategory.current[21] = element }}/>
+                </label>
+                <label onChange={handleCategoryChange}>
+                  Sales
+                  <input type="checkbox" name='category=Sales&' ref={(element) => { refCategory.current[22] = element }}/>
+                </label>
+                <label onChange={handleCategoryChange}>
+                  Science and Engineering
+                  <input type="checkbox" name='category=Science%20and%20Engineering&' ref={(element) => { refCategory.current[23] = element }}/>
+                </label>
+                <label onChange={handleCategoryChange}>
+                  Software Engineer
+                  <input type="checkbox" name='category=Software%20Engineer&category=Software%20Engineering&' ref={(element) => { refCategory.current[24] = element }}/>
+                </label>
+                <label onChange={handleCategoryChange}>
+                  Sports, Fitness, and Recreation
+                  <input type="checkbox" name='category=Sports,%20Fitness,%20and%20Recreation&' ref={(element) => { refCategory.current[25] = element }}/>
+                </label>
+                <label onChange={handleCategoryChange}>
+                  Transportation and Logistics
+                  <input type="checkbox" name='category=Transportation%20and%20Logistics&' ref={(element) => { refCategory.current[26] = element }}/>
+                </label>
+                <label onChange={handleCategoryChange}>
+                  Videography
+                  <input type="checkbox" name='category=Videography&' ref={(element) => { refCategory.current[27] = element }}/>
+                </label>
+                <label onChange={handleCategoryChange}>
+                  Writing and Editing
+                  <input type="checkbox" name='category=Writer&category=Writing%20and%20Editing&' ref={(element) => { refCategory.current[28] = element }}/>
                 </label>
 
               </div>

@@ -76,7 +76,7 @@ function OffersList({ setSignInAlert }) {
       { 
         loading === false && offers.length === 0 && (
           <div style={{textAlign: 'center', marginTop: '8rem'}}>
-              <h2>No jobs found</h2>
+              <h2>Sorry... no jobs found :(</h2>
           </div>
         )
       }
