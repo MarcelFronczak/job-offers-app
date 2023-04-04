@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretLeft, faCaretRight } from '@fortawesome/free-solid-svg-icons';
 import { FiltersContext } from '../../../../context/FiltersContext';
 
-function OffersList({ searchbarFilter, setSignInAlert }) {
+function OffersList({ setSignInAlert }) {
     const [offers, setOffers] = useState([]);
     const [loading, setLoading] = useState(true);
     const [page, setPage] = useState(1);
@@ -15,14 +15,14 @@ function OffersList({ searchbarFilter, setSignInAlert }) {
     useEffect(() => {
       // when filters are submited or deleted, we come back to page #1
       setPage(1);
-    }, [searchbarFilter, filters])
+    }, [filters])
 
     useEffect(() => {
       setLoading(true)
       axios.get(`https://www.themuse.com/api/public/jobs?page=1`)
           .then(res => {
-            setOffers(res.data.results);
             setLoading(false);
+            setOffers(res.data.results);
           }
           )
           .catch(err => {
@@ -35,22 +35,15 @@ function OffersList({ searchbarFilter, setSignInAlert }) {
       setLoading(true)
         axios.get(`https://www.themuse.com/api/public/jobs?${filters.category}${filters.level}page=${page}`)
             .then(res => {
-                const data = res.data.results.filter((offer) => {
-                if (offer.name.toLowerCase().includes(searchbarFilter.toLowerCase())) {
-                  return offer;
-                } else {
-                  return null;
-                }
-              });
-              setOffers(data)
               setLoading(false)
+              setOffers(res.data.results)
             })
             .catch(err => {
               console.log(err)
               setLoading(false)
             })
             
-    }, [page, searchbarFilter, filters])
+    }, [page, filters])
 
     const handlePreviousBtnClick = () => {
       if(page !== 1) {

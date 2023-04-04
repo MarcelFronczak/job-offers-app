@@ -7,19 +7,13 @@ import { faFacebookF, faLinkedinIn, faGithub } from '@fortawesome/free-brands-sv
 import { Link } from 'react-router-dom';
 import { UserAuth } from '../../../../context/AuthContext';
 
-function Navbar({ setSearchbarFilter, signInAlert, setSignInAlert }) {
+function Navbar({ signInAlert, setSignInAlert }) {
   const [open, setOpen] = useState(false);
-  const [search, setSearch] = useState('');
   const { user, logOut } = UserAuth();
   const [userBtnOpen, setUserBtnOpen] = useState(false);
 
   const handleClick = () => {
     setOpen(!open);
-  }
-
-  const handleChange = (e) => {
-      setSearch(e.target.value);
-      setSearchbarFilter(e.target.value);
   }
 
   const handleUserBtnClick = () => {
@@ -64,9 +58,7 @@ function Navbar({ setSearchbarFilter, signInAlert, setSignInAlert }) {
                     {
                       user?.displayName ? (
                         <div className="user-container">
-
                             <button className='user-account-btn' onClick={handleUserBtnClick}>
-                              
                               <FontAwesomeIcon icon={faCircleUser} className='user-btn-icon' />
                               <p className="user-name-btn">{truncateName(user.displayName)}</p>
                               {userBtnOpen ? <FontAwesomeIcon icon={faChevronUp} className='chevron-user' /> : <FontAwesomeIcon icon={faChevronDown} className='chevron-user'/> }
@@ -112,16 +104,6 @@ function Navbar({ setSearchbarFilter, signInAlert, setSignInAlert }) {
       <aside className='sidebar'>
         <div className="sidebar-content">
           <div className='filters-div'>
-            <div className="searchbar-shadow-wrap">
-                <input
-                    value={search}
-                    onChange={handleChange}
-                    type='text'
-                    className='searchbar'
-                    placeholder='Search for jobs...'
-                    spellCheck='false'>
-                </input>
-              </div>
             <FiltersForm />
           </div>
           <div className="icons-container">
@@ -135,16 +117,6 @@ function Navbar({ setSearchbarFilter, signInAlert, setSignInAlert }) {
       <aside className={open ? 'sidebar-mobile' : 'sidebar-mobile hidden'}>
         <div className="sidebar-content">
           <div className='filters-div'>
-            <div className="searchbar-shadow-wrap">
-              <input
-                  value={search}
-                  onChange={handleChange}
-                  type='text'
-                  className='searchbar'
-                  placeholder='Search for jobs...'
-                  spellCheck='false'>
-              </input>
-            </div>
             <FiltersForm open={open} setOpen={setOpen} />
           </div>
           <div className="icons-container">
