@@ -156,14 +156,16 @@
     border: 1px solid #e82a2a;
 }
 
-.form-buttons button:hover {
-    border-width: 2px;
-}
-
-.form-buttons button:hover {
-    font-weight: 600;
-}
-
 input {
     cursor: pointer;
+}
+
+@media screen and (min-width: 820px) {
+    .form-buttons button:hover {
+        border-width: 2px;
+    }
+    
+    .form-buttons button:hover {
+        font-weight: 600;
+    }
 }
