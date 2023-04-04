@@ -76,12 +76,12 @@
 }
 
 .category-list::-webkit-scrollbar {
-    background: #dedede;
+    background-color: #dedede;
     width: 5px;
 }
 
 .category-list::-webkit-scrollbar-thumb {
-    background-color: #c0c0c0;
+    background-color: #ea4e4e;
 }
 
 .list-visible label {

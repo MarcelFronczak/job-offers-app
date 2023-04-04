@@ -213,10 +213,8 @@ function FiltersForm({ open, setOpen}) {
                   Writing and Editing
                   <input type="checkbox" name='category=Writer&category=Writing%20and%20Editing&' ref={(element) => { refCategory.current[28] = element }}/>
                 </label>
-
               </div>
           </fieldset>
-        
         <div className="form-buttons">
             <button className="submit-btn" onClick={handleSaveClick}>Save</button>
             <button className='clear-btn' onClick={handleClearClick}>Clear</button>
